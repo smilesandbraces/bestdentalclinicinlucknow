@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Best Dental Clinic in Lucknow | Smiles & Braces Dental Clinic</title>
+  <meta name="description" content="World-class dentistry in Lucknow. Implants, Aligners, Smile Makeovers, RCT, Crowns & more. Book an appointment in 30 seconds."/>
+  <link rel="canonical" href="https://www.bestdentalclinicinlucknow.com/"/>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0b0f14; --card:#0f1621; --muted:#9fb3c8; --text:#eaf2ff;
+      --brand:#ff6a00; --brand-2:#ffb703; --ok:#9cffd0; --warn:#ffd1a6;
+      --stroke:rgba(255,255,255,.12); --glass:rgba(255,255,255,.06);
+      --shadow:0 10px 30px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.04);
+      --radius:20px; --radius-lg:28px; --max:1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0; background:
+      radial-gradient(1200px 600px at 20% -10%, #152033 0%, transparent 55%),
+      radial-gradient(900px 480px at 100% 0%, #1a2740 0%, transparent 60%),
+      var(--bg);
+      color:var(--text); font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif; scroll-behavior:smooth}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    /* ===== NAV ===== */
+    .nav{position:sticky;top:0;z-index:50;backdrop-filter:saturate(140%) blur(12px);
+      background:linear-gradient(180deg, rgba(10,14,20,.85), rgba(10,14,20,.55));
+      border-bottom:1px solid var(--stroke)}
+    .nav__in{max-width:var(--max);margin:auto;display:flex;align-items:center;gap:18px;padding:14px 20px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.2px}
+    .brand .logo{width:42px;height:42px;border-radius:14px;overflow:hidden;
+      background:conic-gradient(from 0deg, var(--brand), #ff4d4d, #ffb703, var(--brand));
+      box-shadow:0 10px 24px rgba(255,106,0,.35), inset 0 0 20px rgba(255,255,255,.25)}
+    .brand span{font-family:"Playfair Display",serif;font-weight:800;font-size:1.05rem}
+    .navlinks{margin-left:auto;display:flex;gap:10px}
+    .navlinks a{padding:10px 14px;border:1px solid var(--stroke);border-radius:12px;color:var(--muted);
+      transition:.25s ease;font-weight:600;font-size:.95rem}
+    .navlinks a:hover{color:var(--text);border-color:rgba(255,255,255,.18);transform:translateY(-1px)}
+    .cta{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#111;padding:10px 16px;border-radius:14px;
+      font-weight:800;box-shadow:0 10px 24px rgba(255,106,0,.35);border:0;transition:.25s ease}
+    .cta:hover{transform:translateY(-1px) scale(1.02);filter:saturate(115%)}
+
+    /* ===== LAYOUT ===== */
+    .wrap{max-width:var(--max);margin:auto;padding:40px 20px}
+    .grid{display:grid;gap:24px}
+    @media(min-width:900px){.grid-2{grid-template-columns:1.25fr 1fr}}
+
+    /* ===== HERO / HOME ===== */
+    #home{padding:56px 20px 24px;position:relative;overflow:hidden}
+    .orbit{position:absolute;inset:-20% -10% auto auto;width:900px;height:900px;pointer-events:none;
+      background:radial-gradient(closest-side, rgba(255,255,255,.12), transparent 70%) 50% 50%/60% 60% no-repeat,
+                 conic-gradient(from 180deg, rgba(255,106,0,.22), rgba(255,183,3,.12), transparent 70%);
+      filter:blur(28px) saturate(140%);opacity:.6;animation:spin 24s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border:1px solid var(--stroke);border-radius:var(--radius-lg);box-shadow:var(--shadow);overflow:hidden}
+    .hero-inners{display:grid;gap:26px;padding:34px}
+    .kicker{display:inline-block;padding:6px 12px;border:1px solid var(--stroke);color:var(--muted);
+      border-radius:999px;font-weight:700;letter-spacing:.3px}
+    .title{font-family:"Playfair Display",serif;font-weight:800;line-height:1.04;
+      font-size:clamp(32px,4.2vw,56px);margin:10px 0}
+    .sub{color:#cfe1ff;opacity:.9;font-size:clamp(16px,1.8vw,18px);max-width:60ch}
+    .badges{display:flex;gap:10px;flex-wrap:wrap}
+    .badge{background:var(--glass);border:1px solid var(--stroke);border-radius:12px;padding:8px 12px;color:#d8e6ff;font-weight:700}
+
+    /* ===== GIANT BOOK ===== */
+    .giant{margin-top:8px;background:linear-gradient(135deg, rgba(255,106,0,.15), rgba(255,183,3,.12));
+      border:1px solid rgba(255,255,255,.14);border-radius:var(--radius-lg);box-shadow:var(--shadow);position:relative}
+    .giant-in{display:grid;gap:18px;padding:20px}
+    @media(min-width:900px){.giant-in{grid-template-columns:1.2fr .8fr;align-items:center;padding:26px 28px}}
+    .giant h3{font-size:clamp(22px,2.2vw,32px);margin:0 0 6px;font-weight:900}
+    .giant p{color:#f2f6ff;opacity:.9;margin:0 0 10px}
+    .slots{display:flex;gap:10px;flex-wrap:wrap}
+    .slot{padding:8px 10px;border-radius:10px;background:rgba(255,255,255,.08);border:1px dashed rgba(255,255,255,.18);font-weight:700}
+    .book-big{display:inline-flex;align-items:center;gap:10px;padding:18px 22px;font-weight:900;border-radius:16px;border:0;cursor:pointer;
+      background:conic-gradient(from 90deg, var(--brand), var(--brand-2), var(--brand));color:#111;
+      box-shadow:0 16px 34px rgba(255,106,0,.35);transition:transform .18s ease, filter .2s ease;position:relative;isolation:isolate}
+    .book-big:hover{transform:translateY(-2px) scale(1.01);filter:saturate(116%)}
+    .btn-sub{font-weight:800;font-size:.9rem;opacity:.9}
+
+    /* ===== SERVICES ===== */
+    #services{scroll-margin-top:100px}
+    .sec-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:18px}
+    .sec-head h2{font-family:"Playfair Display",serif;font-size:clamp(28px,3.2vw,42px);margin:0}
+    .sec-head p{color:var(--muted);max-width:70ch;margin:0}
+    .cards{display:grid;gap:18px;grid-template-columns:repeat(1,minmax(0,1fr))}
+    @media(min-width:650px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(min-width:1000px){.cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border:1px solid var(--stroke);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:12px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .tag{position:absolute;top:12px;right:12px;font-size:.75rem;font-weight:800;color:#111;
+      background:linear-gradient(135deg,#ffd2a8,#ffe08a);padding:6px 10px;border-radius:999px}
+    .tag.value{background:linear-gradient(135deg,#c5d8ff,#9bc2ff)}
+    .cname{font-weight:900;letter-spacing:.2px;font-size:1.05rem}
+    .csub{color:#cee3ff;opacity:.9;font-size:.92rem}
+    .cta-row{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .book{--glow:rgba(255,106,0,.35);display:inline-flex;align-items:center;gap:8px;padding:10px 12px;font-weight:900;border-radius:12px;
+      border:1px solid rgba(255,255,255,.18);background:linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.05));
+      box-shadow:0 6px 16px var(--glow), inset 0 1px 0 rgba(255,255,255,.18);transition:transform .16s ease, box-shadow .2s ease, border-color .2s ease}
+    .book:hover{transform:translateY(-2px);box-shadow:0 10px 26px var(--glow), inset 0 1px 0 rgba(255,255,255,.24);border-color:rgba(255,255,255,.28)}
+    .book .pulse{width:9px;height:9px;border-radius:999px;background:var(--brand);box-shadow:0 0 0 0 rgba(255,106,0,.5);animation:pulse 1.6s infinite}
+    @keyframes pulse{to{box-shadow:0 0 0 16px rgba(255,106,0,0)}}
+    .price{color:#fff;opacity:.85;font-weight:800;letter-spacing:.3px}
+
+    /* ===== FLOAT ACTIONS ===== */
+    .fab{position:fixed;right:18px;bottom:18px;display:flex;flex-direction:column;gap:10px;z-index:60}
+    .fab a{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:999px;font-weight:900;
+      background:linear-gradient(135deg,#25D366,#a8f3c8);color:#04210f;box-shadow:0 10px 24px rgba(37,211,102,.35)}
+    .fab a:nth-child(2){background:linear-gradient(135deg,#ffd39a,#ffb703);color:#2b1900;box-shadow:0 10px 24px rgba(255,183,3,.35)}
+
+    footer{border-top:1px solid var(--stroke);margin-top:32px}
+    .foot{max-width:var(--max);margin:auto;padding:18px 20px;color:var(--muted);display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+    .reveal{opacity:0;transform:translateY(12px);transition:opacity .4s ease, transform .4s ease}
+    .reveal.show{opacity:1;transform:none}
+
+    /* ===== BOOKING MODAL (Web Component styles live in Shadow DOM; these aid dialog polyfill/backdrop) ===== */
+    dialog::backdrop{background:rgba(5,8,12,.6);backdrop-filter:blur(6px)}
+    .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:-80px;background:linear-gradient(135deg,#0d1a2b,#0a1220);
+      border:1px solid var(--stroke);color:#dff8ff;padding:12px 16px;border-radius:12px;box-shadow:var(--shadow);z-index:70;opacity:0}
+  </style>
+
+  <!-- SEO Organization JSON-LD (services JSON-LD can be added later if you want) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"MedicalOrganization",
+    "name":"Smiles & Braces Dental Clinic",
+    "url":"https://www.bestdentalclinicinlucknow.com",
+    "logo":"https://www.bestdentalclinicinlucknow.com/assets/logo.png",
+    "medicalSpecialty":"Dentistry",
+    "address":{"@type":"PostalAddress","addressLocality":"Indira Nagar","addressRegion":"Uttar Pradesh","addressCountry":"IN","postalCode":"226016"},
+    "telephone":"+91-95653-21625",
+    "sameAs":["https://www.bestindiandentist.com/"]
+  }
+  </script>
+</head>
+<body>
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav__in">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <span>Best Dental Clinic in Lucknow</span>
+      </div>
+      <nav class="navlinks">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <button class="cta" type="button" onclick="window.openBooking()">Book Now</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HOME -->
+  <main id="home">
+    <div class="orbit" aria-hidden="true"></div>
+    <section class="wrap grid grid-2">
+      <div class="hero-card reveal">
+        <div class="hero-inners">
+          <span class="kicker">Smiles & Braces Dental Clinic • Dr. Vikram Jeet Singh (BDS, MDS)</span>
+          <h1 class="title">World-class Dental Care in Lucknow — Implants, Aligners & Smile Makeovers</h1>
+          <p class="sub">Advanced, painless dentistry with transparent pricing and compassionate care. <b>EMI</b> available on premium treatments.</p>
+          <div class="badges" aria-label="Highlights">
+            <span class="badge">Invisalign & Braces</span>
+            <span class="badge">Dental Implants</span>
+            <span class="badge">Microscope RCT</span>
+            <span class="badge">Same-Day Crowns</span>
+            <span class="badge">Kids Dentistry</span>
+          </div>
+
+          <!-- GIANT BOOK -->
+          <div class="giant">
+            <div class="giant-in">
+              <div>
+                <h3>Ready for a Confident, Pain-free Smile?</h3>
+                <p>Instant booking in <b>30 seconds</b>. Pick a slot and send—no waiting.</p>
+                <div class="slots" aria-label="Popular time slots">
+                  <span class="slot">Today 5:30 PM</span>
+                  <span class="slot">Today 7:00 PM</span>
+                  <span class="slot">Tomorrow 11:30 AM</span>
+                  <span class="slot">Tomorrow 6:00 PM</span>
+                </div>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-start">
+                <button class="book-big" type="button" onclick="window.openBooking()">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3H5c-1.1 0-2 .9-2 2v14l4-4h12c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/></svg>
+                  <span>GIANT BOOK APPOINTMENT</span>
+                </button>
+                <span class="btn-sub">or call <a href="tel:+919565321625" style="text-decoration:underline;color:#fff">+91 95653 21625</a></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right info cards -->
+      <div class="reveal" style="display:flex;flex-direction:column;gap:18px">
+        <div class="hero-card" style="padding:22px">
+          <h3 style="margin:0 0 8px;font-weight:900">Why Patients Choose Us</h3>
+          <ul style="margin:0;padding-left:18px;line-height:1.8">
+            <li>Transparent treatment plans & EMI on premium cases</li>
+            <li>Ultra-hygienic, sterilized setup</li>
+            <li>Digital scans, 3D planning, painless anesthesia</li>
+            <li>Top-tier materials & lab partners</li>
+          </ul>
+        </div>
+        <div class="hero-card" style="padding:22px">
+          <h3 style="margin:0 0 8px;font-weight:900">Location</h3>
+          <p style="margin:0;color:#cfe1ff">Indira Nagar, Lucknow • Easy parking • Landmark shared after booking</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SERVICES -->
+  <section id="services" class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <h2>Services — Premium to Budget-friendly</h2>
+        <p>Tap “Book Appointment” on any service to pre-fill the form. We’ll confirm your slot on WhatsApp or call.</p>
+      </div>
+      <a class="cta" href="#home">Back to Top</a>
+    </div>
+
+    <div class="cards">
+      <!-- 36 curated services -->
+      <article class="card reveal"><span class="tag">Premium</span><div class="cname">Full-Mouth Dental Implants (All-on-X)</div><div class="csub">Teeth fixed on 4–6 implants per arch for full-arch restoration.</div><div class="cta-row"><button class="book" onclick="openBooking('Full-Mouth Dental Implants (All-on-X)')"><span class="pulse"></span> Book Appointment</button><span class="price">EMI Available</span></div></article>
+      <article class="card reveal"><span class="tag">Premium</span><div class="cname">Single Tooth Implant + Ceramic Crown</div><div class="csub">Permanent, natural-looking replacement for a missing tooth.</div><div class="cta-row"><button class="book" onclick="openBooking('Single Tooth Implant + Ceramic Crown')"><span class="pulse"></span> Book Appointment</button><span class="price">From ₹</span></div></article>
+      <article class="card reveal"><span class="tag">Premium</span><div class="cname">Smile Makeover (Digital Smile Design)</div><div class="csub">Veneers, whitening & gum recontouring planned digitally.</div><div class="cta-row"><button class="book" onclick="openBooking('Smile Makeover (Digital Smile Design)')"><span class="pulse"></span> Book Appointment</button><span class="price">Custom Plan</span></div></article>
+      <article class="card reveal"><span class="tag">Premium</span><div class="cname">Porcelain Veneers / Laminates</div><div class="csub">Ultra-thin shells to fix gaps, chips & stains—instant glam.</div><div class="cta-row"><button class="book" onclick="openBooking('Porcelain Veneers / Laminates')"><span class="pulse"></span> Book Appointment</button><span class="price">Per Tooth</span></div></article>
+      <article class="card reveal"><span class="tag">Premium</span><div class="cname">Clear Aligners (Invisalign & Advanced)</div><div class="csub">Nearly invisible straightening with 3D planning.</div><div class="cta-row"><button class="book" onclick="openBooking('Clear Aligners (Invisalign & Advanced)')"><span class="pulse"></span> Book Appointment</button><span class="price">EMI Available</span></div></article>
+      <article class="card reveal"><span class="tag value">Standard</span><div class="cname">Metal / Ceramic Braces</div><div class="csub">Reliable orthodontics for teens & adults.</div><div class="cta-row"><button class="book" onclick="openBooking('Metal / Ceramic Braces')"><span class="pulse"></span> Book Appointment</button><span class="price">Plan Based</span></div></article>
+      <article class="card reveal"><span class="tag value">Standard</span><div class="cname">Self-Ligating (Damon-style) Braces</div><div class="csub">Lower friction, fewer visits, comfortable progress.</div><div class="cta-row"><button class="book" onclick="openBooking('Self-Ligating (Damon-style) Braces')"><span class="pulse"></span> Book Appointment</button><span class="price">Plan Based</span></div></article>
+      <article class="card reveal"><span class="tag value">Standard</span><div class="cname">Microscope-Assisted Root Canal (M-RCT)</div><div class="csub">Precision, painless RCT with better long-term success.</div><div class="cta-row"><button class="book" onclick="openBooking('Microscope-Assisted Root Canal (M-RCT)')"><span class="pulse"></span> Book Appointment</button><span class="price">From ₹</span></div></article>
+      <article class="card reveal"><span class="tag value">Standard</span><div class="cname">Single-Visit Root Canal</div><div class="csub">Finish RCT in one sitting where suitable.</div><div class="cta-row"><button class="book" onclick="openBooking('Single-Visit Root Canal')"><span class="pulse"></span> Book Appointment</button><span class="price">Fast</span></div></article>
+      <article class="card reveal"><span class="tag value">Standard</span><div class="cname">Crown & Bridge (Zirconia / E-max)</div><div class="csub">Durable, aesthetic, metal-free options available.</div><div class="cta-row"><button class="book" onclick="openBooking('Crown & Bridge (Zirconia / E-max)')"><span class="pulse"></span> Book Appointment</button><span class="price">Per Unit</span></div></article>
+      <article class="card reveal"><span class="tag value">Standard</span><div class="cname">Teeth Whitening (In-Clinic)</div><div class="csub">Safe, dramatic shade lift in one session.</div><div class="cta-row"><button class="book" onclick="openBooking('Teeth Whitening (In-Clinic)')"><span class="pulse"></span> Book Appointment</button><span class="price">Popular</span></div></article>
+      <article class="card reveal"><span class="tag value">Value</span><div class="cname">Home Whitening Kits (Supervised)</div><div class="csub">Custom trays & gels with dentist guidance.</div><div class="cta-row"><button class="book" onclick="openBooking('Home Whitening Kits (Supervised)')"><span class="pulse"></span> Book Appointment</button><span class="price">Budget</span></div></article>
+      <article class="card reveal"><span class="tag value">Standard</span><div class="cname">Cosmetic Bonding / Diastema Closure</div><div class="csub">Fix chips and gaps with sculpted composites.</div><div class="cta-row"><button class="book" onclick="openBooking('Cosmetic Bonding / Diastema Closure')"><span class="pulse"></span> Book Appointment</button><span class="price">Quick</span></div></article>
+      <article class="card reveal"><span class="tag value">Standard</span><div class="cname">Gum Contouring / Crown Lengthening</div><div class="csub">Reshape gumline for balanced symmetry.</div><div class="cta-row"><button class="book" onclick="openBooking('Gum Contouring / Crown Lengthening')"><span class="pulse"></span> Book Appointment</button><span class="price">Aesthetic</span></div></article>
+      <article class="card reveal"><span class="tag value">Standard</span><div class="cname">Wisdom Tooth Surgery (Impacted)</div><div class="csub">Safe extractions with minimal discomfort.</div><div class="cta-row"><button class="book" onclick="openBooking('Wisdom Tooth Surgery (Impacted)')"><span class="pulse"></span> Book Appointment</button><span class="price">Oral Surgery</span></div></article>
+      <article class="card reveal"><span class="tag value">Value</span><div class="cname">Simple Extractions</div><div class="csub">Gentle removals with proper anesthesia.</div><div class="cta-row"><button class="book" onclick="openBooking('Simple Extractions')"><span class="pulse"></span> Book Appointment</button><span class="price">Budget</span></div></article>
+      <article class="card reveal"><span class="tag value">Standard</span><div class="cname">Scaling & Polishing</div><div class="csub">Professional cleaning for gum health.</div><div class="cta-row"><button class="book" onclick="openBooking('Scaling & Polishing')"><span class="pulse"></span> Book Appointment</button><span class="price">Routine</span></div></article>
+      <article class="card reveal"><span class="tag value">Value</span><div class="cname">Fluoride / Desensitizing Treatments</div><div class="csub">Reduce sensitivity, strengthen enamel.</div><div class="cta-row"><button class="book" onclick="openBooking('Fluoride / Desensitizing Treatments')"><span class="pulse"></span> Book Appointment</button><span class="price">Quick</span></div></article>
+      <article class="card reveal"><span class="tag value">Standard</span><div class="cname">Tooth-Colored Fillings (Composite)</div><div class="csub">Aesthetic restorations that blend in.</div><div class="cta-row"><button class="book" onclick="openBooking('Tooth-Colored Fillings (Composite)')"><span class="pulse"></span> Book Appointment</button><span class="price">Per Tooth</span></div></article>
+      <article class="card reveal"><span class="tag value">Standard</span><div class="cname">Inlays & Onlays</div><div class="csub">Precision partial crowns for big cavities.</div><div class="cta-row"><button class="book" onclick="openBooking('Inlays & Onlays')"><span class="pulse"></span> Book Appointment</button><span class="price">Lab-Made</span></div></article>
+      <article class="card reveal"><span class="tag value">Standard</span><div class="cname">Smile Design Consult (3D Preview)</div><div class="csub">Visualize results before you begin.</div><div class="cta-row"><button class="book" onclick="openBooking('Smile Design Consult (3D Preview)')"><span class="pulse"></span> Book Appointment</button><span class="price">Popular</span></div></article>
+      <article class="card reveal"><span class="tag value">Standard</span><div class="cname">Laser Dentistry (Select Procedures)</div><div class="csub">Minimally invasive soft-tissue care.</div><div class="cta-row"><button class="book" onclick="openBooking('Laser Dentistry (Select Procedures)')"><span class="pulse"></span> Book Appointment</button><span class="price">Comfort</span></div></article>
+      <article class="card reveal"><span class="tag value">Standard</span><div class="cname">Gum Disease Therapy (SRP / Periodontal)</div><div class="csub">Deep cleaning & maintenance.</div><div class="cta-row"><button class="book" onclick="openBooking('Gum Disease Therapy (SRP / Periodontal)')"><span class="pulse"></span> Book Appointment</button><span class="price">Plan Based</span></div></article>
+      <article class="card reveal"><span class="tag value">Value</span><div class="cname">Pit & Fissure Sealants (Kids/Teens)</div><div class="csub">Preventive coating for molars.</div><div class="cta-row"><button class="book" onclick="openBooking('Pit & Fissure Sealants (Kids/Teens)')"><span class="pulse"></span> Book Appointment</button><span class="price">Preventive</span></div></article>
+      <article class="card reveal"><span class="tag value">Standard</span><div class="cname">Space Maintainers (Pedo)</div><div class="csub">Maintain arch space after early loss.</div><div class="cta-row"><button class="book" onclick="openBooking('Space Maintainers (Pedo)')"><span class="pulse"></span> Book Appointment</button><span class="price">Kids</span></div></article>
+      <article class="card reveal"><span class="tag value">Standard</span><div class="cname">Habit-Breaking Appliances</div><div class="csub">Help stop thumb sucking / tongue thrust.</div><div class="cta-row"><button class="book" onclick="openBooking('Habit-Breaking Appliances')"><span class="pulse"></span> Book Appointment</button><span class="price">Kids</span></div></article>
+      <article class="card reveal"><span class="tag value">Standard</span><div class="cname">Night Guard / Bruxism Splints</div><div class="csub">Protect teeth from grinding.</div><div class="cta-row"><button class="book" onclick="openBooking('Night Guard / Bruxism Splints')"><span class="pulse"></span> Book Appointment</button><span class="price">Custom</span></div></article>
+      <article class="card reveal"><span class="tag value">Value</span><div class="cname">Sports Mouthguards</div><div class="csub">Custom-fit protection for athletes.</div><div class="cta-row"><button class="book" onclick="openBooking('Sports Mouthguards')"><span class="pulse"></span> Book Appointment</button><span class="price">Custom</span></div></article>
+      <article class="card reveal"><span class="tag value">Standard</span><div class="cname">Post & Core Build-up</div><div class="csub">Rebuild teeth before crowns.</div><div class="cta-row"><button class="book" onclick="openBooking('Post & Core Build-up')"><span class="pulse"></span> Book Appointment</button><span class="price">Restorative</span></div></article>
+      <article class="card reveal"><span class="tag value">Value</span><div class="cname">Removable Dentures (Partial/Complete)</div><div class="csub">Functional, cost-friendly replacement.</div><div class="cta-row"><button class="book" onclick="openBooking('Removable Dentures (Partial/Complete)')"><span class="pulse"></span> Book Appointment</button><span class="price">Cost-friendly</span></div></article>
+      <article class="card reveal"><span class="tag value">Value</span><div class="cname">Flexible Dentures</div><div class="csub">Lightweight, comfortable partials.</div><div class="cta-row"><button class="book" onclick="openBooking('Flexible Dentures')"><span class="pulse"></span> Book Appointment</button><span class="price">Comfort</span></div></article>
+      <article class="card reveal"><span class="tag value">Standard</span><div class="cname">Root Coverage / Graft (Selective)</div><div class="csub">Treat recession for aesthetics.</div><div class="cta-row"><button class="book" onclick="openBooking('Root Coverage / Graft (Selective)')"><span class="pulse"></span> Book Appointment</button><span class="price">Periodontics</span></div></article>
+      <article class="card reveal"><span class="tag value">Standard</span><div class="cname">Frenectomy (Tongue/Lip Tie)</div><div class="csub">Simple soft-tissue procedure.</div><div class="cta-row"><button class="book" onclick="openBooking('Frenectomy (Tongue/Lip Tie)')"><span class="pulse"></span> Book Appointment</button><span class="price">Laser/Conventional</span></div></article>
+      <article class="card reveal"><span class="tag value">Value</span><div class="cname">Emergency Pain Relief Visit</div><div class="csub">Same-day evaluation & interim care.</div><div class="cta-row"><button class="book" onclick="openBooking('Emergency Pain Relief Visit')"><span class="pulse"></span> Book Appointment</button><span class="price">Walk-in OK</span></div></article>
+      <article class="card reveal"><span class="tag value">Standard</span><div class="cname">Retainers (Fixed / Removable)</div><div class="csub">Maintain alignment post-treatment.</div><div class="cta-row"><button class="book" onclick="openBooking('Retainers (Fixed / Removable)')"><span class="pulse"></span> Book Appointment</button><span class="price">Ortho Care</span></div></article>
+      <article class="card reveal"><span class="tag value">Standard</span><div class="cname">Comprehensive Dental Checkup</div><div class="csub">Full exam, X-rays as needed & roadmap.</div><div class="cta-row"><button class="book" onclick="openBooking('Comprehensive Dental Checkup')"><span class="pulse"></span> Book Appointment</button><span class="price">Best Start</span></div></article>
+    </div>
+  </section>
+
+  <!-- FLOATING QUICK ACTIONS -->
+  <div class="fab">
+    <a href="https://wa.me/919565321625?text=Hi%20Dr.%20Vikram%2C%20I%27d%20like%20to%20book%20an%20appointment.">WhatsApp</a>
+    <a href="tel:+919565321625">Call</a>
+  </div>
+
+  <footer>
+    <div class="foot">
+      <small>© <span id="yr"></span> Smiles & Braces Dental Clinic, Lucknow. All rights reserved.</small>
+      <small>Website: bestdentalclinicinlucknow.com</small>
+    </div>
+  </footer>
+
+  <!-- ===== Booking Modal Web Component (Shadow DOM) ===== -->
+  <template id="booking-tpl">
+    <style>
+      :host{all:initial; font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+      dialog{max-width:min(680px, 92vw); border:1px solid rgba(255,255,255,.18); border-radius:22px; padding:0; background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); color:#eaf2ff; box-shadow:0 30px 80px rgba(0,0,0,.55)}
+      header{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid rgba(255,255,255,.1)}
+      h3{all:unset;font-weight:900;font-size:1.15rem}
+      .inner{display:grid;gap:16px;padding:18px 20px}
+      .grid{display:grid;gap:12px}
+      @media(min-width:720px){.grid{grid-template-columns:1fr 1fr}}
+      .control{position:relative}
+      .control input,.control select,.control textarea{
+        width:100%;padding:14px 12px 12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:12px;color:#fff;font:inherit;outline:none
+      }
+      .control textarea{min-height:90px;resize:vertical}
+      .control label{
+        position:absolute;left:12px;top:8px;font-size:.78rem;color:#cde2ff;opacity:.9;background:transparent;padding:0 6px;pointer-events:none
+      }
+      .row{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+      .actions{display:flex;gap:10px;justify-content:flex-end;padding:10px 20px 18px;border-top:1px solid rgba(255,255,255,.1)}
+      .btn{padding:12px 14px;border-radius:12px;font-weight:900;border:1px solid rgba(255,255,255,.18);background:linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.05));color:#fff;cursor:pointer}
+      .btn:hover{filter:saturate(115%)}
+      .primary{background:conic-gradient(from 90deg,#ff6a00,#ffb703,#ff6a00);color:#111;border:0;box-shadow:0 12px 28px rgba(255,106,0,.35)}
+      .ghost{background:transparent}
+      small.muted{color:#cfe1ff;opacity:.8}
+      .success,.error{display:none;margin:6px 20px 0;font-weight:800}
+      .success{color:#9cffd0}.error{color:#ffb5b5}
+    </style>
+    <dialog>
+      <header>
+        <h3>Book Appointment</h3>
+        <button class="btn ghost" data-close>✕</button>
+      </header>
+      <form method="POST" action="https://formspree.io/f/xanpokbz" class="inner" novalidate>
+        <input type="hidden" name="_subject" value="New Appointment · bestdentalclinicinlucknow.com"/>
+        <input type="hidden" name="_captcha" value="false"/>
+        <input type="text" name="_gotcha" style="display:none"/>
+        <div class="grid">
+          <div class="control">
+            <label for="name">Full Name</label>
+            <input id="name" name="name" placeholder="Full Name" required/>
+          </div>
+          <div class="control">
+            <label for="phone">Phone (WhatsApp)</label>
+            <input id="phone" name="phone" placeholder="+91 XXXXX XXXXX" inputmode="tel" pattern="[\d\s+\-()]{8,}" required/>
+          </div>
+          <div class="control">
+            <label for="service">Service</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Select a service</option>
+              <option>Full-Mouth Dental Implants (All-on-X)</option>
+              <option>Single Tooth Implant + Ceramic Crown</option>
+              <option>Smile Makeover (Digital Smile Design)</option>
+              <option>Porcelain Veneers / Laminates</option>
+              <option>Clear Aligners (Invisalign & Advanced)</option>
+              <option>Metal / Ceramic Braces</option>
+              <option>Self-Ligating (Damon-style) Braces</option>
+              <option>Microscope-Assisted Root Canal (M-RCT)</option>
+              <option>Single-Visit Root Canal</option>
+              <option>Crown & Bridge (Zirconia / E-max)</option>
+              <option>Teeth Whitening (In-Clinic)</option>
+              <option>Home Whitening Kits (Supervised)</option>
+              <option>Cosmetic Bonding / Diastema Closure</option>
+              <option>Gum Contouring / Crown Lengthening</option>
+              <option>Wisdom Tooth Surgery (Impacted)</option>
+              <option>Simple Extractions</option>
+              <option>Scaling & Polishing</option>
+              <option>Fluoride / Desensitizing Treatments</option>
+              <option>Tooth-Colored Fillings (Composite)</option>
+              <option>Inlays & Onlays</option>
+              <option>Smile Design Consult (3D Preview)</option>
+              <option>Laser Dentistry (Select Procedures)</option>
+              <option>Gum Disease Therapy (SRP / Periodontal)</option>
+              <option>Pit & Fissure Sealants (Kids/Teens)</option>
+              <option>Space Maintainers (Pedo)</option>
+              <option>Habit-Breaking Appliances</option>
+              <option>Night Guard / Bruxism Splints</option>
+              <option>Sports Mouthguards</option>
+              <option>Post & Core Build-up</option>
+              <option>Removable Dentures (Partial/Complete)</option>
+              <option>Flexible Dentures</option>
+              <option>Root Coverage / Graft (Selective)</option>
+              <option>Frenectomy (Tongue/Lip Tie)</option>
+              <option>Emergency Pain Relief Visit</option>
+              <option>Retainers (Fixed / Removable)</option>
+              <option>Comprehensive Dental Checkup</option>
+            </select>
+          </div>
+          <div class="control">
+            <label for="date">Preferred Date</label>
+            <input id="date" name="date" type="date" required/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="control">
+            <label for="time">Preferred Time</label>
+            <input id="time" name="time" type="time" required/>
+          </div>
+          <div class="control">
+            <label for="email">Email (optional)</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com"/>
+          </div>
+        </div>
+        <div class="control">
+          <label for="msg">Notes</label>
+          <textarea id="msg" name="message" placeholder="Tell us anything important (pain, previous treatment, etc.)"></textarea>
+        </div>
+        <small class="muted">Submitting will notify our front-desk instantly. We’ll confirm on WhatsApp/call.</small>
+        <p class="success">✅ Request sent! We’ll reply shortly on WhatsApp.</p>
+        <p class="error">⚠️ Something went wrong. Please try again or WhatsApp us.</p>
+        <div class="actions">
+          <a class="btn" href="https://wa.me/919565321625?text=Hi%20Dr.%20Vikram%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener">WhatsApp Instead</a>
+          <button class="btn" type="button" data-close>Cancel</button>
+          <button class="btn primary" type="submit">Send Request</button>
+        </div>
+      </form>
+    </dialog>
+  </template>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    // Intersection reveals
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target); }
+      });
+    }, {threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+    // Year
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // Web Component: booking-modal
+    class BookingModal extends HTMLElement{
+      constructor(){
+        super();
+        const tpl = document.getElementById('booking-tpl').content.cloneNode(true);
+        this.attachShadow({mode:'open'}).appendChild(tpl);
+      }
+      connectedCallback(){
+        this.dlg = this.shadowRoot.querySelector('dialog');
+        this.form = this.shadowRoot.querySelector('form');
+        this.serviceSel = this.shadowRoot.getElementById('service');
+        this.success = this.shadowRoot.querySelector('.success');
+        this.error = this.shadowRoot.querySelector('.error');
+
+        this.shadowRoot.querySelectorAll('[data-close]').forEach(btn=>{
+          btn.addEventListener('click', ()=>this.close());
+        });
+
+        // Submit via AJAX to Formspree; fallback to normal POST if fetch fails
+        this.form.addEventListener('submit', async (ev)=>{
+          ev.preventDefault();
+          const data = new FormData(this.form);
+          try{
+            const res = await fetch(this.form.action, { method:'POST', body: data, headers: { 'Accept': 'application/json' }});
+            if(res.ok){
+              this.success.style.display='block';
+              this.error.style.display='none';
+              this.toast('Request sent! We’ll confirm shortly.');
+              this.form.reset();
+              setTimeout(()=>this.close(), 900);
+            }else{
+              this.success.style.display='none';
+              this.error.style.display='block';
+              this.toast('Could not send. Try WhatsApp.', true);
+            }
+          }catch(_){
+            this.form.submit(); // fallback
+          }
+        });
+
+        // Polyfill-ish open for browsers lacking dialog.showModal
+        if(!('showModal' in HTMLDialogElement.prototype)){
+          this.dlg.setAttribute('open','');
+          this.dlg.style.display='none';
+          this.dlg.showModal = ()=>{ this.dlg.style.display='block'; document.documentElement.style.overflow='hidden'; }
+          this.dlg.close = ()=>{ this.dlg.style.display='none'; document.documentElement.style.overflow=''; }
+        }
+      }
+      open(prefill){
+        if(prefill){
+          const opts = Array.from(this.serviceSel.options);
+          const match = opts.find(o=>o.textContent===prefill);
+          if(match){ this.serviceSel.value=prefill; }
+        }
+        this.dlg.showModal();
+        // Subtle WAAPI intro animation
+        this.dlg.animate([{transform:'translateY(14px)',opacity:0},{transform:'none',opacity:1}],{duration:220,easing:'cubic-bezier(.2,.8,.2,1)'});
+      }
+      close(){ this.dlg.close(); }
+      toast(text, warn=false){
+        const t = document.getElementById('toast');
+        t.textContent = text;
+        t.style.borderColor = 'var(--stroke)';
+        t.style.background = warn ? 'linear-gradient(135deg,#2a0f0f,#140a0a)' : 'linear-gradient(135deg,#0d1a2b,#0a1220)';
+        t.animate([{transform:'translate(-50%, 40px)',opacity:0},{transform:'translate(-50%, -24px)',opacity:1}],{duration:240,fill:'forwards'});
+        setTimeout(()=>t.animate([{transform:'translate(-50%, -24px)',opacity:1},{transform:'translate(-50%, 40px)',opacity:0}],{duration:300,fill:'forwards'}), 2200);
+      }
+    }
+    customElements.define('booking-modal', BookingModal);
+    const booking = document.createElement('booking-modal');
+    document.body.appendChild(booking);
+
+    // Global helpers
+    window.openBooking = (service)=> booking.open(service);
+    window.openBooking = window.openBooking.bind(window);
+
+    // Convenience alias for service buttons
+    function openBooking(service){ window.openBooking(service); }
+    window.openBookingService = openBooking;
+  </script>
+</body>
+</html>
