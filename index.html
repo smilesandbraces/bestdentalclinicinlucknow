@@ -4,105 +4,109 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Best Dental Clinic in Lucknow | Smiles & Braces Dental Clinic</title>
-  <meta name="description" content="Smiles & Braces Dental Clinic in Munshi Pulia, Lucknow. Dr. Vikram Jeet Singh (BDS, MDS). Book appointment for Braces, Aligners, RCT, Implants, Whitening & more. Call/WhatsApp +91 9565321625." />
-  <meta name="theme-color" content="#0f172a" />
+  <meta name="description" content="Smiles & Braces Dental Clinic, Munshi Pulia (Indira Nagar), Lucknow. Dr. Vikram Jeet Singh (BDS, MDS). Book appointments for Braces, Aligners, RCT, Implants, Whitening & more. Call/WhatsApp +91 9565321625." />
+  <meta name="theme-color" content="#0b1324" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CDN (single file) -->
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: {
-            sans: ["Inter", "ui-sans-serif", "system-ui"],
-            display: ["Playfair Display", "ui-serif"]
+          fontFamily: { sans: ["Inter","ui-sans-serif","system-ui"], display: ["Manrope","Inter","ui-sans-serif","system-ui"] },
+          colors: {
+            ink: { 950: "#071122", 900:"#0b1324", 800:"#101b33" },   // deep navy
+            aqua: { 700:"#0aa6b4", 600:"#11b9c8", 500:"#18c7d8" },  // dental teal
+            mint: { 500:"#2dd4bf" },                                // soft mint
+            pearl: { 50:"#f6fbff" },                                // clean white-blue
           }
         }
       }
     }
   </script>
 
-  <!-- Lightweight icons (inline SVG uses) + small custom CSS for glow/animations -->
   <style>
-    /* prevent accidental horizontal scroll on mobile */
-html, body { overflow-x: hidden; }
+    /* Prevent any mobile horizontal overflow */
+    html, body { overflow-x: hidden; }
 
-/* make safe-area padding smaller & consistent */
-.safe-area-bottom {
-  padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 0.5rem);
-}
-
-/* smaller pill buttons for mobile sticky CTA */
-.mobile-sticky {
-  --gap: 0.5rem;
-  padding: 0.5rem 0.75rem;
-  backdrop-filter: none;        /* avoid heavy glass effect here */
-  background: linear-gradient(90deg, rgba(2,6,23,0.95), rgba(7,10,25,0.95));
-  box-shadow: 0 8px 30px rgba(2,6,23,0.35);
-  border-radius: 14px;
-}
-
-.mobile-sticky .btn {
-  flex: 1;
-  border-radius: 12px;
-  padding: 0.5rem 0.75rem;
-  font-weight: 700;
-  text-align: center;
-}
-:root { color-scheme: light; }
+    /* Premium glass (used sparingly) */
     .glass {
-      background: rgba(255,255,255,.72);
+      background: rgba(255,255,255,.76);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255,255,255,.6);
+      border: 1px solid rgba(255,255,255,.70);
     }
-    .ring-soft { box-shadow: 0 0 0 1px rgba(15,23,42,.08) inset; }
-    .shadow-luxe { box-shadow: 0 30px 70px rgba(2,6,23,.18); }
-    .shadow-soft { box-shadow: 0 18px 44px rgba(2,6,23,.12); }
-    .gradient-hero {
+
+    /* Soft rings & shadows */
+    .ring-soft { box-shadow: 0 0 0 1px rgba(2,6,23,.08) inset; }
+    .shadow-luxe { box-shadow: 0 24px 70px rgba(2,6,23,.22); }
+    .shadow-soft { box-shadow: 0 16px 44px rgba(2,6,23,.14); }
+
+    /* Hero background: professional dental palette (navy + teal) */
+    .hero-bg{
       background:
-        radial-gradient(900px 420px at 20% 15%, rgba(56,189,248,.28), transparent 60%),
-        radial-gradient(700px 420px at 80% 10%, rgba(168,85,247,.22), transparent 55%),
-        radial-gradient(800px 520px at 55% 85%, rgba(34,197,94,.16), transparent 60%),
-        linear-gradient(180deg, #0b1220, #0f172a 45%, #0b1220);
+        radial-gradient(900px 420px at 18% 15%, rgba(24,199,216,.28), transparent 60%),
+        radial-gradient(800px 420px at 82% 10%, rgba(45,212,191,.18), transparent 60%),
+        radial-gradient(900px 520px at 55% 90%, rgba(14,165,233,.14), transparent 60%),
+        linear-gradient(180deg, #071122, #0b1324 45%, #071122);
     }
-    .text-shimmer {
-      background: linear-gradient(90deg, #fff, #dbeafe, #fff);
-      -webkit-background-clip: text; background-clip: text; color: transparent;
-      background-size: 200% 100%;
-      animation: shimmer 3.5s linear infinite;
+
+    /* Shimmer heading */
+    .text-shimmer{
+      background: linear-gradient(90deg, #ffffff, #bff5fb, #ffffff);
+      -webkit-background-clip: text; background-clip:text; color:transparent;
+      background-size: 220% 100%;
+      animation: shimmer 3.8s linear infinite;
     }
-    @keyframes shimmer { 0%{background-position:0% 50%} 100%{background-position:200% 50%} }
-    @keyframes floaty { 0%,100%{ transform: translateY(0)} 50%{transform: translateY(-10px)} }
-    .floaty { animation: floaty 5s ease-in-out infinite; }
-    .reveal { opacity: 0; transform: translateY(14px); transition: all .7s cubic-bezier(.2,.7,.2,1); }
-    .reveal.in { opacity: 1; transform: translateY(0); }
-    .btn-luxe {
-      position: relative;
-      overflow: hidden;
-      isolation: isolate;
-    }
-    .btn-luxe:before {
-      content:"";
-      position:absolute; inset:-2px;
+    @keyframes shimmer { 0%{background-position:0% 50%} 100%{background-position:220% 50%} }
+
+    /* Reveal on scroll */
+    .reveal { opacity:0; transform: translateY(14px); transition: all .7s cubic-bezier(.2,.7,.2,1); }
+    .reveal.in { opacity:1; transform: translateY(0); }
+
+    /* Button light-follow */
+    .btn-luxe{ position:relative; overflow:hidden; isolation:isolate; }
+    .btn-luxe:before{
+      content:""; position:absolute; inset:-2px;
       background: radial-gradient(180px 90px at var(--x,30%) var(--y,50%), rgba(255,255,255,.35), transparent 60%);
-      opacity: 0; transition: opacity .2s ease;
-      z-index: -1;
+      opacity:0; transition: opacity .18s ease; z-index:-1;
     }
-    .btn-luxe:hover:before { opacity: 1; }
-    .safe-area-bottom { padding-bottom: max(1rem, env(safe-area-inset-bottom)); }
+    .btn-luxe:hover:before{ opacity:1; }
+
+    /* Mobile safe area */
+    .safe-area-bottom { padding-bottom: calc(env(safe-area-inset-bottom, 0px) + .5rem); }
+
+    /* Clean mobile sticky CTA (no heavy glass) */
+    .mobile-sticky{
+      padding:.55rem .75rem;
+      background: linear-gradient(90deg, rgba(7,17,34,.95), rgba(11,19,36,.95));
+      border: 1px solid rgba(255,255,255,.08);
+      box-shadow: 0 10px 34px rgba(2,6,23,.38);
+      border-radius: 16px;
+    }
+    .mobile-sticky .btn{
+      flex:1;
+      border-radius: 14px;
+      padding:.62rem .9rem;
+      font-weight: 800;
+      letter-spacing: .2px;
+      text-align:center;
+    }
   </style>
 
-  <!-- LocalBusiness / Dentist Schema -->
+  <!-- Schema: Dentist / LocalBusiness -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"Dentist",
     "name":"Smiles & Braces Dental Clinic",
-    "description":"Best Dental Clinic in Lucknow. Braces, Aligners, RCT, Implants, Whitening and more by Dr. Vikram Jeet Singh (BDS, MDS).",
+    "description":"Best Dental Clinic in Lucknow. Braces, Aligners, RCT, Implants, Whitening & more by Dr. Vikram Jeet Singh (BDS, MDS).",
+    "telephone":"+91-9565321625",
+    "email":"smilesandbracesmunshipuliya@gmail.com",
     "address":{
       "@type":"PostalAddress",
       "streetAddress":"Shop No.6, Javed Market, near Aurobindo Park, Munshi Pulia, Sector 12, Indira Nagar",
@@ -111,52 +115,52 @@ html, body { overflow-x: hidden; }
       "postalCode":"226016",
       "addressCountry":"IN"
     },
-    "telephone":"+91-9565321625",
-    "email":"smilesandbracesmunshipuliya@gmail.com",
     "areaServed":"Lucknow",
-    "geo":{"@type":"GeoCoordinates","latitude":26.897, "longitude":81.046},
-    "priceRange":"$$",
-    "medicalSpecialty":"Dentistry"
+    "priceRange":"$$"
   }
   </script>
 </head>
 
-<body class="font-sans bg-slate-50 text-slate-900 selection:bg-slate-900 selection:text-white">
-  <!-- Top sticky CTA bar -->
+<body class="font-sans bg-pearl-50 text-slate-900 selection:bg-ink-900 selection:text-white">
+
+  <!-- TOP BAR -->
   <div class="sticky top-0 z-50">
     <div class="glass ring-soft">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between py-3 gap-3">
-          <div class="flex items-center gap-3">
-            <div class="h-10 w-10 rounded-2xl bg-slate-900 text-white grid place-items-center shadow-soft">
+        <div class="flex items-center justify-between gap-3 py-3">
+          <a href="#top" class="flex items-center gap-3">
+            <div class="h-10 w-10 rounded-2xl bg-ink-900 text-white grid place-items-center shadow-soft">
               <!-- tooth icon -->
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M8.5 3.5C6 4.6 4.5 7 4.5 10.2c0 5.8 2.7 10.8 5.2 10.8 1.3 0 1.4-2.5 2.3-4.7.4-1 .7-1.3 1-1.3s.6.3 1 1.3c.9 2.2 1 4.7 2.3 4.7 2.5 0 5.2-5 5.2-10.8C21.5 7 20 4.6 17.5 3.5c-1.5-.6-3.2-.6-5.5.2-2.3-.8-4-.8-5.5-.2Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
             <div class="leading-tight">
-              <div class="text-sm font800 font-extrabold tracking-tight">Smiles & Braces Dental Clinic</div>
+              <div class="font-display font-extrabold tracking-tight">Smiles & Braces Dental Clinic</div>
               <div class="text-xs text-slate-600">Dr. Vikram Jeet Singh (BDS, MDS) • Munshi Pulia, Lucknow</div>
             </div>
-          </div>
+          </a>
 
           <div class="hidden md:flex items-center gap-2">
-            <a class="btn-luxe inline-flex items-center gap-2 rounded-xl bg-slate-900 px-4 py-2.5 text-white font-semibold shadow-soft hover:shadow-luxe transition" href="tel:+919565321625" aria-label="Call now">
+            <a class="btn-luxe inline-flex items-center gap-2 rounded-xl bg-ink-900 px-4 py-2.5 text-white font-extrabold shadow-soft hover:shadow-luxe transition"
+               href="tel:+919565321625" aria-label="Call">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6.4 6.4l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6A2 2 0 0 1 22 16.9Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
               Call
             </a>
-            <a class="btn-luxe inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-4 py-2.5 text-white font-semibold shadow-soft hover:shadow-luxe transition"
-               href="https://wa.me/919565321625?text=Hello%20Smiles%20%26%20Braces%20Dental%20Clinic%2C%20I%20want%20to%20book%20an%20appointment.%20My%20name%20is%20____%20and%20I%20need%20service%20____."
+
+            <a class="btn-luxe inline-flex items-center gap-2 rounded-xl bg-aqua-700 px-4 py-2.5 text-white font-extrabold shadow-soft hover:shadow-luxe transition"
+               href="https://wa.me/919565321625?text=Hello%20Smiles%20%26%20Braces%20Dental%20Clinic%2C%20I%20want%20to%20book%20an%20appointment."
                target="_blank" rel="noopener" aria-label="WhatsApp">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.4-4.7A8.5 8.5 0 1 1 20.5 11.7Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M9 9.5c.5 2 3.5 5 5.5 5.5.5.1 1.3-.2 1.7-.6l.6-.6c.3-.3.2-.8-.2-1l-1.3-.7c-.3-.2-.8-.1-1 .2l-.3.4c-.2.2-.5.3-.8.2-1.2-.5-2.2-1.4-2.7-2.7-.1-.3 0-.6.2-.8l.4-.3c.3-.2.4-.7.2-1l-.7-1.3c-.2-.4-.7-.5-1-.2l-.6.6c-.4.4-.7 1.2-.6 1.7Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
               WhatsApp
             </a>
-            <a class="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-slate-900 font-semibold shadow-sm hover:shadow-soft transition" href="#book">
+
+            <a class="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-slate-900 font-extrabold shadow-sm hover:shadow-soft transition"
+               href="#book">
               Book Appointment
             </a>
           </div>
@@ -172,79 +176,83 @@ html, body { overflow-x: hidden; }
         <!-- Mobile menu -->
         <div id="mobileMenu" class="hidden pb-4 md:hidden">
           <div class="grid gap-2">
-            <a class="btn-luxe inline-flex items-center justify-center gap-2 rounded-xl bg-slate-900 px-4 py-2.5 text-white font-semibold shadow-soft transition" href="tel:+919565321625">Call Now</a>
-            <a class="btn-luxe inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 px-4 py-2.5 text-white font-semibold shadow-soft transition"
-               href="https://wa.me/919565321625?text=Hello%20Smiles%20%26%20Braces%20Dental%20Clinic%2C%20I%20want%20to%20book%20an%20appointment.%20My%20name%20is%20____%20and%20I%20need%20service%20____."
+            <a class="btn-luxe inline-flex items-center justify-center rounded-xl bg-ink-900 px-4 py-2.5 text-white font-extrabold shadow-soft"
+               href="tel:+919565321625">Call Now</a>
+            <a class="btn-luxe inline-flex items-center justify-center rounded-xl bg-aqua-700 px-4 py-2.5 text-white font-extrabold shadow-soft"
+               href="https://wa.me/919565321625?text=Hello%20Smiles%20%26%20Braces%20Dental%20Clinic%2C%20I%20want%20to%20book%20an%20appointment."
                target="_blank" rel="noopener">WhatsApp</a>
-            <a class="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-slate-900 font-semibold shadow-sm" href="#book">Book Appointment</a>
-            <a class="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-slate-900 font-semibold shadow-sm" href="#services">Services</a>
-            <a class="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-slate-900 font-semibold shadow-sm" href="#testimonials">Reviews</a>
-            <a class="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-slate-900 font-semibold shadow-sm" href="#contact">Contact</a>
+            <a class="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-slate-900 font-extrabold shadow-sm"
+               href="#book">Book Appointment</a>
+            <a class="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-slate-900 font-extrabold shadow-sm"
+               href="#services">Services</a>
+            <a class="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-slate-900 font-extrabold shadow-sm"
+               href="#testimonials">Reviews</a>
+            <a class="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-slate-900 font-extrabold shadow-sm"
+               href="#contact">Contact</a>
           </div>
         </div>
+
       </div>
     </div>
   </div>
 
   <!-- HERO -->
-  <header class="gradient-hero text-white relative overflow-hidden">
-    <div class="absolute inset-0 opacity-30 pointer-events-none">
-      <div class="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-sky-400 blur-3xl"></div>
-      <div class="absolute -top-16 right-0 h-72 w-72 rounded-full bg-fuchsia-400 blur-3xl"></div>
-      <div class="absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-emerald-400 blur-3xl"></div>
-    </div>
-
+  <header id="top" class="hero-bg text-white relative overflow-hidden">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-14 pb-16 lg:pt-20 lg:pb-20 relative">
       <div class="grid lg:grid-cols-2 gap-10 items-center">
-        <div class="reveal">
-          <p class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold ring-1 ring-white/15">
-            <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
-            Open for Appointments • Indira Nagar, Lucknow
-          </p>
 
-          <h1 class="mt-5 font-display text-4xl sm:text-5xl lg:text-6xl leading-tight">
+        <!-- Left -->
+        <div class="reveal">
+          <div class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-bold ring-1 ring-white/15">
+            <span class="h-2 w-2 rounded-full bg-mint-500"></span>
+            Open for Appointments • Indira Nagar, Lucknow
+          </div>
+
+          <h1 class="mt-5 font-display text-4xl sm:text-5xl lg:text-6xl leading-tight tracking-tight">
             <span class="text-shimmer">Best Dental Clinic in Lucknow</span>
           </h1>
 
           <p class="mt-5 text-base sm:text-lg text-white/85 leading-relaxed max-w-xl">
-            Get a confident, healthy smile with evidence-based dentistry and a comfort-first approach.
-            <span class="font-semibold text-white">Dr. Vikram Jeet Singh (BDS, MDS)</span> — braces, aligners, RCT, implants, whitening and more.
+            Comfort-first dentistry with clear treatment plans and modern care.
+            <span class="font-extrabold text-white">Dr. Vikram Jeet Singh (BDS, MDS)</span> — braces, aligners, RCT, implants, whitening and more.
           </p>
 
           <div class="mt-8 flex flex-col sm:flex-row gap-3">
-            <a class="btn-luxe inline-flex items-center justify-center gap-2 rounded-2xl bg-white text-slate-900 px-6 py-3.5 font-extrabold shadow-luxe hover:opacity-95 transition"
+            <a class="btn-luxe inline-flex items-center justify-center gap-2 rounded-2xl bg-white text-ink-900 px-6 py-3.5 font-extrabold shadow-luxe hover:opacity-95 transition"
                href="#book">
               Book Appointment
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </a>
-            <a class="btn-luxe inline-flex items-center justify-center gap-2 rounded-2xl bg-emerald-500 text-white px-6 py-3.5 font-extrabold shadow-luxe hover:opacity-95 transition"
-               href="https://wa.me/919565321625?text=Hello%20Smiles%20%26%20Braces%20Dental%20Clinic%2C%20I%20want%20to%20book%20an%20appointment.%20My%20name%20is%20____%20and%20I%20need%20service%20____."
+
+            <a class="btn-luxe inline-flex items-center justify-center gap-2 rounded-2xl bg-aqua-700 text-white px-6 py-3.5 font-extrabold shadow-luxe hover:opacity-95 transition"
+               href="https://wa.me/919565321625?text=Hello%20Smiles%20%26%20Braces%20Dental%20Clinic%2C%20I%20want%20to%20book%20an%20appointment."
                target="_blank" rel="noopener">
               WhatsApp Now
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.4-4.7A8.5 8.5 0 1 1 20.5 11.7Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </a>
-            <a class="inline-flex items-center justify-center gap-2 rounded-2xl bg-white/10 text-white px-6 py-3.5 font-bold ring-1 ring-white/15 hover:bg-white/15 transition"
+
+            <a class="inline-flex items-center justify-center gap-2 rounded-2xl bg-white/10 text-white px-6 py-3.5 font-extrabold ring-1 ring-white/15 hover:bg-white/15 transition"
                href="tel:+919565321625">
               Call +91 9565321625
             </a>
           </div>
 
-          <div class="mt-7 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-xl">
+          <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-xl">
             <div class="glass text-slate-900 rounded-2xl p-4 ring-soft">
               <div class="text-2xl font-extrabold">4.9★</div>
-              <div class="text-xs text-slate-600 mt-1">Patient satisfaction focus</div>
+              <div class="text-xs text-slate-600 mt-1">Patient-first experience</div>
             </div>
             <div class="glass text-slate-900 rounded-2xl p-4 ring-soft">
-              <div class="text-2xl font-extrabold">Zero</div>
-              <div class="text-xs text-slate-600 mt-1">Clutter. Clean & safe clinic</div>
+              <div class="text-2xl font-extrabold">Clean</div>
+              <div class="text-xs text-slate-600 mt-1">Hygiene-focused clinic</div>
             </div>
             <div class="glass text-slate-900 rounded-2xl p-4 ring-soft">
               <div class="text-2xl font-extrabold">Fast</div>
-              <div class="text-xs text-slate-600 mt-1">Quick appointment booking</div>
+              <div class="text-xs text-slate-600 mt-1">Quick confirmations</div>
             </div>
             <div class="glass text-slate-900 rounded-2xl p-4 ring-soft">
               <div class="text-2xl font-extrabold">Care+</div>
@@ -253,15 +261,15 @@ html, body { overflow-x: hidden; }
           </div>
         </div>
 
-        <!-- Right card -->
+        <!-- Right: Quick Booking Card -->
         <div class="reveal">
-          <div class="glass rounded-3xl p-6 sm:p-8 shadow-luxe ring-soft floaty">
+          <div class="glass rounded-3xl p-6 sm:p-8 shadow-luxe ring-soft">
             <div class="flex items-start justify-between gap-4">
               <div>
-                <h2 class="text-slate-900 font-extrabold text-2xl">Book in 30 seconds</h2>
-                <p class="text-slate-600 mt-1">Select a service, choose a preferred time, and we’ll confirm quickly.</p>
+                <h2 class="text-slate-900 font-extrabold text-2xl font-display">Book in 30 seconds</h2>
+                <p class="text-slate-600 mt-1">Choose service + time. We confirm on WhatsApp/call.</p>
               </div>
-              <div class="h-12 w-12 rounded-2xl bg-slate-900 text-white grid place-items-center shadow-soft">
+              <div class="h-12 w-12 rounded-2xl bg-ink-900 text-white grid place-items-center shadow-soft">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                   <path d="M8 7V3m8 4V3M5 11h14M6 5h12a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
@@ -271,18 +279,18 @@ html, body { overflow-x: hidden; }
             <form id="quickForm" class="mt-6 grid gap-3" novalidate>
               <div class="grid sm:grid-cols-2 gap-3">
                 <label class="grid gap-1">
-                  <span class="text-sm font-semibold text-slate-800">Full Name</span>
-                  <input required name="name" class="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none focus:ring-4 focus:ring-slate-900/10" placeholder="Your name" />
+                  <span class="text-sm font-bold text-slate-800">Full Name</span>
+                  <input required name="name" class="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none focus:ring-4 focus:ring-aqua-500/15" placeholder="Your name" />
                 </label>
                 <label class="grid gap-1">
-                  <span class="text-sm font-semibold text-slate-800">Phone (WhatsApp)</span>
-                  <input required name="phone" inputmode="tel" class="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none focus:ring-4 focus:ring-slate-900/10" placeholder="+91 XXXXX XXXXX" />
+                  <span class="text-sm font-bold text-slate-800">Phone (WhatsApp)</span>
+                  <input required name="phone" inputmode="tel" class="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none focus:ring-4 focus:ring-aqua-500/15" placeholder="+91 XXXXX XXXXX" />
                 </label>
               </div>
 
               <label class="grid gap-1">
-                <span class="text-sm font-semibold text-slate-800">Select Dental Service</span>
-                <select required name="service" class="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none focus:ring-4 focus:ring-slate-900/10">
+                <span class="text-sm font-bold text-slate-800">Select Dental Service</span>
+                <select required name="service" class="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none focus:ring-4 focus:ring-aqua-500/15">
                   <option value="" selected disabled>Choose a service…</option>
                   <option>Dental Checkup & Consultation</option>
                   <option>Tooth Pain / Emergency Visit</option>
@@ -307,12 +315,12 @@ html, body { overflow-x: hidden; }
 
               <div class="grid sm:grid-cols-2 gap-3">
                 <label class="grid gap-1">
-                  <span class="text-sm font-semibold text-slate-800">Preferred Date</span>
-                  <input required name="date" type="date" class="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none focus:ring-4 focus:ring-slate-900/10" />
+                  <span class="text-sm font-bold text-slate-800">Preferred Date</span>
+                  <input required name="date" type="date" class="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none focus:ring-4 focus:ring-aqua-500/15" />
                 </label>
                 <label class="grid gap-1">
-                  <span class="text-sm font-semibold text-slate-800">Preferred Time Slot</span>
-                  <select required name="slot" class="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none focus:ring-4 focus:ring-slate-900/10">
+                  <span class="text-sm font-bold text-slate-800">Preferred Time</span>
+                  <select required name="slot" class="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none focus:ring-4 focus:ring-aqua-500/15">
                     <option value="" selected disabled>Select time…</option>
                     <option>Morning (9 AM – 12 PM)</option>
                     <option>Afternoon (12 PM – 3 PM)</option>
@@ -323,14 +331,14 @@ html, body { overflow-x: hidden; }
               </div>
 
               <label class="grid gap-1">
-                <span class="text-sm font-semibold text-slate-800">Notes (optional)</span>
-                <textarea name="notes" rows="3" class="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none focus:ring-4 focus:ring-slate-900/10" placeholder="Any concern like pain, sensitivity, braces consultation, etc."></textarea>
+                <span class="text-sm font-bold text-slate-800">Notes (optional)</span>
+                <textarea name="notes" rows="3" class="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none focus:ring-4 focus:ring-aqua-500/15"
+                  placeholder="Pain, sensitivity, braces consultation, etc."></textarea>
               </label>
 
               <div class="flex flex-col sm:flex-row gap-3 pt-1">
                 <button type="submit"
-                        class="btn-luxe w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-2xl bg-slate-900 px-6 py-3.5 text-white font-extrabold shadow-soft hover:shadow-luxe transition"
-                        id="submitBtn">
+                        class="btn-luxe w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-2xl bg-ink-900 px-6 py-3.5 text-white font-extrabold shadow-soft hover:shadow-luxe transition">
                   Request Appointment
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                     <path d="M22 2 11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -338,67 +346,23 @@ html, body { overflow-x: hidden; }
                   </svg>
                 </button>
 
-                <a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-2xl bg-emerald-600 px-6 py-3.5 text-white font-extrabold shadow-soft hover:shadow-luxe transition"
-                   id="waBtn"
-                   href="https://wa.me/919565321625?text=Hello%20Smiles%20%26%20Braces%20Dental%20Clinic%2C%20I%20want%20to%20book%20an%20appointment.%20My%20name%20is%20____%20and%20I%20need%20service%20____."
+                <a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-2xl bg-aqua-700 px-6 py-3.5 text-white font-extrabold shadow-soft hover:shadow-luxe transition"
+                   href="https://wa.me/919565321625?text=Hello%20Smiles%20%26%20Braces%20Dental%20Clinic%2C%20I%20want%20to%20book%20an%20appointment."
                    target="_blank" rel="noopener">
                   WhatsApp Booking
                 </a>
               </div>
 
-              <p class="text-xs text-slate-500 leading-relaxed">
-                By submitting, you agree to be contacted by call/WhatsApp for appointment confirmation.
-                We respect your privacy.
-              </p>
-
-              <div id="formMsg" class="hidden rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-emerald-900 text-sm"></div>
-              <div id="formErr" class="hidden rounded-2xl border border-rose-200 bg-rose-50 px-4 py-3 text-rose-900 text-sm"></div>
+              <div id="quickMsg" class="hidden rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-emerald-900 text-sm"></div>
+              <div id="quickErr" class="hidden rounded-2xl border border-rose-200 bg-rose-50 px-4 py-3 text-rose-900 text-sm"></div>
             </form>
-          </div>
-        </div>
-      </div>
 
-      <div class="mt-12 grid md:grid-cols-3 gap-4 reveal">
-        <div class="rounded-3xl bg-white/10 ring-1 ring-white/15 p-5">
-          <div class="flex items-center gap-3">
-            <div class="h-11 w-11 rounded-2xl bg-white/10 ring-1 ring-white/15 grid place-items-center">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M20 7 10 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <div>
-              <div class="font-extrabold">Transparent Guidance</div>
-              <div class="text-sm text-white/75">Clear options. No confusion.</div>
-            </div>
+            <p class="mt-3 text-xs text-slate-500 leading-relaxed">
+              By submitting, you agree to be contacted by call/WhatsApp for appointment confirmation.
+            </p>
           </div>
         </div>
-        <div class="rounded-3xl bg-white/10 ring-1 ring-white/15 p-5">
-          <div class="flex items-center gap-3">
-            <div class="h-11 w-11 rounded-2xl bg-white/10 ring-1 ring-white/15 grid place-items-center">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M12 21s-7-4.4-7-11a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 6.6-7 11-7 11Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <div>
-              <div class="font-extrabold">Comfort-First Care</div>
-              <div class="text-sm text-white/75">Gentle approach, patient-friendly.</div>
-            </div>
-          </div>
-        </div>
-        <div class="rounded-3xl bg-white/10 ring-1 ring-white/15 p-5">
-          <div class="flex items-center gap-3">
-            <div class="h-11 w-11 rounded-2xl bg-white/10 ring-1 ring-white/15 grid place-items-center">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M12 8v4l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" stroke="currentColor" stroke-width="1.8"/>
-              </svg>
-            </div>
-            <div>
-              <div class="font-extrabold">Quick Confirmations</div>
-              <div class="text-sm text-white/75">Fast response via WhatsApp/call.</div>
-            </div>
-          </div>
-        </div>
+
       </div>
     </div>
   </header>
@@ -407,29 +371,29 @@ html, body { overflow-x: hidden; }
   <section id="services" class="py-14 sm:py-16">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="reveal">
-        <h2 class="font-display text-3xl sm:text-4xl tracking-tight">Premium Dental Services</h2>
+        <h2 class="font-display text-3xl sm:text-4xl tracking-tight font-extrabold text-ink-900">Dental Services</h2>
         <p class="mt-3 text-slate-600 max-w-2xl">
-          Everything you need for a healthy, confident smile — from routine care to advanced cosmetic and orthodontic solutions.
+          Comprehensive care — from routine checkups to orthodontics and cosmetic dentistry — focused on comfort, clarity, and outcomes.
         </p>
       </div>
 
       <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        <!-- Card template -->
+        <!-- Card -->
         <div class="reveal rounded-3xl bg-white p-6 ring-soft shadow-soft hover:shadow-luxe transition">
           <div class="flex items-start justify-between gap-3">
             <div>
-              <div class="text-lg font-extrabold">Braces & Orthodontics</div>
-              <p class="mt-1 text-sm text-slate-600">Metal/Ceramic braces, bite correction, smile alignment.</p>
+              <div class="text-lg font-extrabold text-ink-900">Braces & Orthodontics</div>
+              <p class="mt-1 text-sm text-slate-600">Alignment, bite correction, smile improvement.</p>
             </div>
-            <div class="h-12 w-12 rounded-2xl bg-slate-900 text-white grid place-items-center">
+            <div class="h-12 w-12 rounded-2xl bg-ink-900 text-white grid place-items-center">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M7 8h10M7 12h10M7 16h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                 <path d="M5 6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6Z" stroke="currentColor" stroke-width="1.6"/>
               </svg>
             </div>
           </div>
-          <a href="#book" class="mt-5 inline-flex items-center gap-2 text-sm font-bold text-slate-900 hover:opacity-70">
-            Book braces consultation
+          <a href="#book" class="mt-5 inline-flex items-center gap-2 text-sm font-extrabold text-ink-900 hover:opacity-75">
+            Book consultation
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
         </div>
@@ -437,17 +401,17 @@ html, body { overflow-x: hidden; }
         <div class="reveal rounded-3xl bg-white p-6 ring-soft shadow-soft hover:shadow-luxe transition">
           <div class="flex items-start justify-between gap-3">
             <div>
-              <div class="text-lg font-extrabold">Clear Aligners</div>
-              <p class="mt-1 text-sm text-slate-600">Invisible braces for adults & teens with planned outcomes.</p>
+              <div class="text-lg font-extrabold text-ink-900">Clear Aligners</div>
+              <p class="mt-1 text-sm text-slate-600">Invisible braces with planned progression.</p>
             </div>
-            <div class="h-12 w-12 rounded-2xl bg-emerald-600 text-white grid place-items-center">
+            <div class="h-12 w-12 rounded-2xl bg-aqua-700 text-white grid place-items-center">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M8 7h8a3 3 0 0 1 3 3v7a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4v-7a3 3 0 0 1 3-3Z" stroke="currentColor" stroke-width="1.8"/>
                 <path d="M9 11h6M9 15h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
               </svg>
             </div>
           </div>
-          <a href="#book" class="mt-5 inline-flex items-center gap-2 text-sm font-bold text-slate-900 hover:opacity-70">
+          <a href="#book" class="mt-5 inline-flex items-center gap-2 text-sm font-extrabold text-ink-900 hover:opacity-75">
             Get aligners plan
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
@@ -456,17 +420,17 @@ html, body { overflow-x: hidden; }
         <div class="reveal rounded-3xl bg-white p-6 ring-soft shadow-soft hover:shadow-luxe transition">
           <div class="flex items-start justify-between gap-3">
             <div>
-              <div class="text-lg font-extrabold">Root Canal (RCT)</div>
-              <p class="mt-1 text-sm text-slate-600">Pain relief, infection control, tooth preservation.</p>
+              <div class="text-lg font-extrabold text-ink-900">Root Canal (RCT)</div>
+              <p class="mt-1 text-sm text-slate-600">Pain relief + tooth preservation.</p>
             </div>
-            <div class="h-12 w-12 rounded-2xl bg-sky-600 text-white grid place-items-center">
+            <div class="h-12 w-12 rounded-2xl bg-slate-900 text-white grid place-items-center">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M12 3v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                 <path d="M8.5 3.5C6 4.6 4.5 7 4.5 10.2c0 5.8 2.7 10.8 5.2 10.8 1.3 0 1.4-2.5 2.3-4.7.4-1 .7-1.3 1-1.3s.6.3 1 1.3c.9 2.2 1 4.7 2.3 4.7 2.5 0 5.2-5 5.2-10.8C21.5 7 20 4.6 17.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
           </div>
-          <a href="#book" class="mt-5 inline-flex items-center gap-2 text-sm font-bold text-slate-900 hover:opacity-70">
+          <a href="#book" class="mt-5 inline-flex items-center gap-2 text-sm font-extrabold text-ink-900 hover:opacity-75">
             Book for tooth pain
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
@@ -475,17 +439,17 @@ html, body { overflow-x: hidden; }
         <div class="reveal rounded-3xl bg-white p-6 ring-soft shadow-soft hover:shadow-luxe transition">
           <div class="flex items-start justify-between gap-3">
             <div>
-              <div class="text-lg font-extrabold">Implants & Crowns</div>
-              <p class="mt-1 text-sm text-slate-600">Natural-looking replacement and durable restorations.</p>
+              <div class="text-lg font-extrabold text-ink-900">Implants & Crowns</div>
+              <p class="mt-1 text-sm text-slate-600">Natural-looking replacement & restoration.</p>
             </div>
-            <div class="h-12 w-12 rounded-2xl bg-fuchsia-600 text-white grid place-items-center">
+            <div class="h-12 w-12 rounded-2xl bg-aqua-700 text-white grid place-items-center">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M12 2 8 6v5l4 3 4-3V6l-4-4Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M8 11v5a4 4 0 0 0 8 0v-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
           </div>
-          <a href="#book" class="mt-5 inline-flex items-center gap-2 text-sm font-bold text-slate-900 hover:opacity-70">
+          <a href="#book" class="mt-5 inline-flex items-center gap-2 text-sm font-extrabold text-ink-900 hover:opacity-75">
             Discuss implant options
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
@@ -494,18 +458,17 @@ html, body { overflow-x: hidden; }
         <div class="reveal rounded-3xl bg-white p-6 ring-soft shadow-soft hover:shadow-luxe transition">
           <div class="flex items-start justify-between gap-3">
             <div>
-              <div class="text-lg font-extrabold">Scaling & Whitening</div>
-              <p class="mt-1 text-sm text-slate-600">Professional cleaning + brightening for a fresh smile.</p>
+              <div class="text-lg font-extrabold text-ink-900">Scaling & Whitening</div>
+              <p class="mt-1 text-sm text-slate-600">Professional cleaning + brightening.</p>
             </div>
-            <div class="h-12 w-12 rounded-2xl bg-amber-500 text-white grid place-items-center">
+            <div class="h-12 w-12 rounded-2xl bg-slate-900 text-white grid place-items-center">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M12 2v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M7 9h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                 <path d="M6 11c0 6.5 2.8 11 6 11s6-4.5 6-11c0-4-2-7-6-7s-6 3-6 7Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9 10h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
               </svg>
             </div>
           </div>
-          <a href="#book" class="mt-5 inline-flex items-center gap-2 text-sm font-bold text-slate-900 hover:opacity-70">
+          <a href="#book" class="mt-5 inline-flex items-center gap-2 text-sm font-extrabold text-ink-900 hover:opacity-75">
             Book cleaning session
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
@@ -514,16 +477,16 @@ html, body { overflow-x: hidden; }
         <div class="reveal rounded-3xl bg-white p-6 ring-soft shadow-soft hover:shadow-luxe transition">
           <div class="flex items-start justify-between gap-3">
             <div>
-              <div class="text-lg font-extrabold">Kids Dentistry</div>
-              <p class="mt-1 text-sm text-slate-600">Gentle care, preventive checkups, child-friendly approach.</p>
+              <div class="text-lg font-extrabold text-ink-900">Kids Dentistry</div>
+              <p class="mt-1 text-sm text-slate-600">Gentle preventive care for children.</p>
             </div>
-            <div class="h-12 w-12 rounded-2xl bg-slate-900 text-white grid place-items-center">
+            <div class="h-12 w-12 rounded-2xl bg-ink-900 text-white grid place-items-center">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M12 21s-7-4.4-7-11a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 6.6-7 11-7 11Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
           </div>
-          <a href="#book" class="mt-5 inline-flex items-center gap-2 text-sm font-bold text-slate-900 hover:opacity-70">
+          <a href="#book" class="mt-5 inline-flex items-center gap-2 text-sm font-extrabold text-ink-900 hover:opacity-75">
             Book kids appointment
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
@@ -532,100 +495,93 @@ html, body { overflow-x: hidden; }
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
+  <!-- TRUST + REVIEWS -->
   <section id="testimonials" class="py-14 bg-white">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="reveal">
-        <h2 class="font-display text-3xl sm:text-4xl tracking-tight">Why Patients Choose Us</h2>
-        <p class="mt-3 text-slate-600 max-w-2xl">Trust is built through consistency, clarity, and real outcomes.</p>
+        <h2 class="font-display text-3xl sm:text-4xl tracking-tight font-extrabold text-ink-900">Why Patients Choose Us</h2>
+        <p class="mt-3 text-slate-600 max-w-2xl">Clear communication, comfort-focused care, and consistent results.</p>
       </div>
 
       <div class="mt-10 grid lg:grid-cols-3 gap-5">
-        <div class="reveal rounded-3xl bg-slate-50 p-7 ring-soft shadow-soft">
-          <div class="flex items-center gap-2 text-amber-500" aria-hidden="true">
-            <span>★★★★★</span>
-          </div>
+        <div class="reveal rounded-3xl bg-pearl-50 p-7 ring-soft shadow-soft">
+          <div class="text-aqua-700 font-extrabold">★★★★★</div>
           <p class="mt-3 text-slate-800 leading-relaxed">
-            “Very professional and gentle treatment. Explained everything clearly and the clinic feels super clean.”
+            “Professional and gentle treatment. Everything was explained clearly and the clinic feels extremely clean.”
           </p>
-          <div class="mt-4 text-sm font-bold">— Rohit Singh</div>
+          <div class="mt-4 text-sm font-extrabold text-ink-900">— Patient Review</div>
         </div>
-
-        <div class="reveal rounded-3xl bg-slate-50 p-7 ring-soft shadow-soft">
-          <div class="flex items-center gap-2 text-amber-500" aria-hidden="true">
-            <span>★★★★★</span>
-          </div>
+        <div class="reveal rounded-3xl bg-pearl-50 p-7 ring-soft shadow-soft">
+          <div class="text-aqua-700 font-extrabold">★★★★★</div>
           <p class="mt-3 text-slate-800 leading-relaxed">
-            “Braces consultation was detailed, and I got a clear plan. Booking and follow-up on WhatsApp was fast.”
+            “Braces consultation was detailed. Booking and follow-up on WhatsApp was quick and smooth.”
           </p>
-          <div class="mt-4 text-sm font-bold">— Stuti Mishra</div>
+          <div class="mt-4 text-sm font-extrabold text-ink-900">— Patient Review</div>
         </div>
-
-        <div class="reveal rounded-3xl bg-slate-50 p-7 ring-soft shadow-soft">
-          <div class="flex items-center gap-2 text-amber-500" aria-hidden="true">
-            <span>★★★★★</span>
-          </div>
+        <div class="reveal rounded-3xl bg-pearl-50 p-7 ring-soft shadow-soft">
+          <div class="text-aqua-700 font-extrabold">★★★★★</div>
           <p class="mt-3 text-slate-800 leading-relaxed">
-            “Tooth pain relief in one visit. Great experience and friendly staff.”
+            “Tooth pain relief in one visit. Friendly staff and very reassuring experience.”
           </p>
-          <div class="mt-4 text-sm font-bold">— Meenu Pandey</div>
+          <div class="mt-4 text-sm font-extrabold text-ink-900">— Patient Review</div>
         </div>
       </div>
 
-      <div class="mt-10 reveal rounded-3xl bg-slate-900 text-white p-7 shadow-luxe">
+      <div class="mt-10 reveal rounded-3xl bg-ink-900 text-white p-7 shadow-luxe">
         <div class="grid md:grid-cols-4 gap-6">
           <div>
-            <div class="text-3xl font-extrabold" data-count="10000">0</div>
+            <div class="text-3xl font-extrabold" data-count="1200">0</div>
             <div class="text-white/70 text-sm mt-1">Happy Visits (approx.)</div>
           </div>
           <div>
-            <div class="text-3xl font-extrabold" data-count="15+">0</div>
-            <div class="text-white/70 text-sm mt-1">Years of Combined Experience</div>
+            <div class="text-3xl font-extrabold" data-count="12">0</div>
+            <div class="text-white/70 text-sm mt-1">Years of Experience</div>
           </div>
           <div>
             <div class="text-3xl font-extrabold" data-count="30">0</div>
-            <div class="text-white/70 text-sm mt-1">Dental Services Available</div>
+            <div class="text-white/70 text-sm mt-1">Services Available</div>
           </div>
           <div>
             <div class="text-3xl font-extrabold" data-count="99">0</div>
-            <div class="text-white/70 text-sm mt-1">Patient Comfort Focus (%)</div>
+            <div class="text-white/70 text-sm mt-1">Comfort Focus (%)</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- BOOK (Full section anchor for UX) -->
+  <!-- BOOK + CONTACT -->
   <section id="book" class="py-14 sm:py-16">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="reveal grid lg:grid-cols-2 gap-8 items-start">
+
+        <!-- Booking Form -->
         <div class="rounded-3xl bg-white p-7 ring-soft shadow-soft">
-          <h3 class="font-display text-2xl sm:text-3xl">Book Your Appointment</h3>
+          <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-ink-900">Book Your Appointment</h3>
           <p class="mt-2 text-slate-600">
-            Fill the form and we’ll confirm on call/WhatsApp. For emergencies, call directly.
+            Submit the form and it will open WhatsApp with your details (ready to send). For emergencies, call directly.
           </p>
 
-          <!-- You can integrate Formspree/EmailJS later; for now it generates WhatsApp message. -->
           <form id="mainForm" class="mt-6 grid gap-3" novalidate>
             <div class="grid sm:grid-cols-2 gap-3">
               <label class="grid gap-1">
-                <span class="text-sm font-semibold text-slate-800">Full Name</span>
-                <input required name="name" class="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none focus:ring-4 focus:ring-slate-900/10" placeholder="Your name" />
+                <span class="text-sm font-bold text-slate-800">Full Name</span>
+                <input required name="name" class="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none focus:ring-4 focus:ring-aqua-500/15" placeholder="Your name" />
               </label>
               <label class="grid gap-1">
-                <span class="text-sm font-semibold text-slate-800">Phone</span>
-                <input required name="phone" inputmode="tel" class="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none focus:ring-4 focus:ring-slate-900/10" placeholder="+91 XXXXX XXXXX" />
+                <span class="text-sm font-bold text-slate-800">Phone</span>
+                <input required name="phone" inputmode="tel" class="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none focus:ring-4 focus:ring-aqua-500/15" placeholder="+91 XXXXX XXXXX" />
               </label>
             </div>
 
             <label class="grid gap-1">
-              <span class="text-sm font-semibold text-slate-800">Email (optional)</span>
-              <input name="email" type="email" class="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none focus:ring-4 focus:ring-slate-900/10" placeholder="you@example.com" />
+              <span class="text-sm font-bold text-slate-800">Email (optional)</span>
+              <input name="email" type="email" class="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none focus:ring-4 focus:ring-aqua-500/15" placeholder="you@example.com" />
             </label>
 
             <label class="grid gap-1">
-              <span class="text-sm font-semibold text-slate-800">Select Dental Service</span>
-              <select required name="service" class="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none focus:ring-4 focus:ring-slate-900/10">
+              <span class="text-sm font-bold text-slate-800">Select Dental Service</span>
+              <select required name="service" class="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none focus:ring-4 focus:ring-aqua-500/15">
                 <option value="" selected disabled>Choose a service…</option>
                 <optgroup label="General Dentistry">
                   <option>Dental Checkup & Consultation</option>
@@ -647,7 +603,6 @@ html, body { overflow-x: hidden; }
                 <optgroup label="Cosmetic Dentistry">
                   <option>Teeth Whitening / Bleaching</option>
                   <option>Veneers / Smile Designing</option>
-                  <option>Tooth Jewellery / Aesthetic Consultation</option>
                 </optgroup>
                 <optgroup label="Restoration">
                   <option>Dental Implants</option>
@@ -663,12 +618,12 @@ html, body { overflow-x: hidden; }
 
             <div class="grid sm:grid-cols-2 gap-3">
               <label class="grid gap-1">
-                <span class="text-sm font-semibold text-slate-800">Preferred Date</span>
-                <input required name="date" type="date" class="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none focus:ring-4 focus:ring-slate-900/10" />
+                <span class="text-sm font-bold text-slate-800">Preferred Date</span>
+                <input required name="date" type="date" class="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none focus:ring-4 focus:ring-aqua-500/15" />
               </label>
               <label class="grid gap-1">
-                <span class="text-sm font-semibold text-slate-800">Preferred Time Slot</span>
-                <select required name="slot" class="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none focus:ring-4 focus:ring-slate-900/10">
+                <span class="text-sm font-bold text-slate-800">Preferred Time</span>
+                <select required name="slot" class="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none focus:ring-4 focus:ring-aqua-500/15">
                   <option value="" selected disabled>Select time…</option>
                   <option>Morning (9 AM – 12 PM)</option>
                   <option>Afternoon (12 PM – 3 PM)</option>
@@ -679,13 +634,13 @@ html, body { overflow-x: hidden; }
             </div>
 
             <label class="grid gap-1">
-              <span class="text-sm font-semibold text-slate-800">Your Concern</span>
-              <textarea required name="notes" rows="4" class="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none focus:ring-4 focus:ring-slate-900/10"
+              <span class="text-sm font-bold text-slate-800">Your Concern</span>
+              <textarea required name="notes" rows="4" class="rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none focus:ring-4 focus:ring-aqua-500/15"
                         placeholder="Please describe your issue (pain, alignment, whitening, implant query, etc.)"></textarea>
             </label>
 
             <div class="flex flex-col sm:flex-row gap-3 pt-1">
-              <button type="submit" class="btn-luxe inline-flex items-center justify-center gap-2 rounded-2xl bg-slate-900 px-6 py-3.5 text-white font-extrabold shadow-soft hover:shadow-luxe transition">
+              <button type="submit" class="btn-luxe inline-flex items-center justify-center gap-2 rounded-2xl bg-ink-900 px-6 py-3.5 text-white font-extrabold shadow-soft hover:shadow-luxe transition">
                 Submit & WhatsApp
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                   <path d="M22 2 11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -693,7 +648,7 @@ html, body { overflow-x: hidden; }
                 </svg>
               </button>
 
-              <a class="inline-flex items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-white px-6 py-3.5 text-slate-900 font-extrabold shadow-sm hover:shadow-soft transition"
+              <a class="inline-flex items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-white px-6 py-3.5 text-ink-900 font-extrabold shadow-sm hover:shadow-soft transition"
                  href="mailto:smilesandbracesmunshipuliya@gmail.com?subject=Appointment%20Request%20-%20Smiles%20%26%20Braces&body=Hello%20Doctor%2C%20I%20want%20to%20book%20an%20appointment.%0A%0AName%3A%20%0APhone%3A%20%0AService%3A%20%0APreferred%20Date%3A%20%0APreferred%20Time%3A%20%0AConcern%3A%20">
                 Email Instead
               </a>
@@ -701,80 +656,84 @@ html, body { overflow-x: hidden; }
 
             <div id="mainErr" class="hidden rounded-2xl border border-rose-200 bg-rose-50 px-4 py-3 text-rose-900 text-sm"></div>
           </form>
+
+          <p class="mt-3 text-xs text-slate-500">
+            You’ll be contacted on WhatsApp/call for confirmation. We respect your privacy.
+          </p>
         </div>
 
+        <!-- Contact -->
         <div class="reveal rounded-3xl bg-white p-7 ring-soft shadow-soft" id="contact">
-          <h3 class="font-display text-2xl sm:text-3xl">Contact & Location</h3>
+          <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-ink-900">Contact & Location</h3>
 
           <div class="mt-5 grid gap-3">
-            <div class="rounded-2xl bg-slate-50 p-4 ring-soft">
-              <div class="text-sm font-semibold text-slate-800">Doctor</div>
-              <div class="text-slate-900 font-extrabold mt-1">Dr. Vikram Jeet Singh (BDS, MDS)</div>
+            <div class="rounded-2xl bg-pearl-50 p-4 ring-soft">
+              <div class="text-sm font-bold text-slate-800">Doctor</div>
+              <div class="text-ink-900 font-extrabold mt-1">Dr. Vikram Jeet Singh (BDS, MDS)</div>
               <div class="text-sm text-slate-600 mt-1">Smiles & Braces Dental Clinic</div>
             </div>
 
-            <div class="rounded-2xl bg-slate-50 p-4 ring-soft">
-              <div class="text-sm font-semibold text-slate-800">Phone / WhatsApp</div>
-              <a href="tel:+919565321625" class="mt-1 inline-flex items-center gap-2 font-extrabold text-slate-900 hover:opacity-70">
-                +91 9565321625
-                <span class="text-xs font-semibold text-slate-500">(Tap to call)</span>
+            <div class="rounded-2xl bg-pearl-50 p-4 ring-soft">
+              <div class="text-sm font-bold text-slate-800">Phone / WhatsApp</div>
+              <a href="tel:+919565321625" class="mt-1 inline-flex items-center gap-2 font-extrabold text-ink-900 hover:opacity-75">
+                +91 9565321625 <span class="text-xs font-bold text-slate-500">(Tap to call)</span>
               </a>
               <div class="mt-2">
-                <a class="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-4 py-2.5 text-white font-bold shadow-sm hover:shadow-soft transition"
-                   href="https://wa.me/919565321625?text=Hello%20Smiles%20%26%20Braces%20Dental%20Clinic%2C%20I%20want%20to%20book%20an%20appointment.%20My%20name%20is%20____%20and%20I%20need%20service%20____."
+                <a class="btn-luxe inline-flex items-center gap-2 rounded-xl bg-aqua-700 px-4 py-2.5 text-white font-extrabold shadow-sm hover:shadow-soft transition"
+                   href="https://wa.me/919565321625?text=Hello%20Smiles%20%26%20Braces%20Dental%20Clinic%2C%20I%20want%20to%20book%20an%20appointment."
                    target="_blank" rel="noopener">
                   WhatsApp Now
                 </a>
               </div>
             </div>
 
-            <div class="rounded-2xl bg-slate-50 p-4 ring-soft">
-              <div class="text-sm font-semibold text-slate-800">Email</div>
-              <a href="mailto:smilesandbracesmunshipuliya@gmail.com" class="mt-1 font-extrabold text-slate-900 hover:opacity-70 break-all">
+            <div class="rounded-2xl bg-pearl-50 p-4 ring-soft">
+              <div class="text-sm font-bold text-slate-800">Email</div>
+              <a href="mailto:smilesandbracesmunshipuliya@gmail.com" class="mt-1 font-extrabold text-ink-900 hover:opacity-75 break-all">
                 smilesandbracesmunshipuliya@gmail.com
               </a>
             </div>
 
-            <div class="rounded-2xl bg-slate-50 p-4 ring-soft">
-              <div class="text-sm font-semibold text-slate-800">Address</div>
-              <p class="mt-1 text-slate-900 font-semibold leading-relaxed">
+            <div class="rounded-2xl bg-pearl-50 p-4 ring-soft">
+              <div class="text-sm font-bold text-slate-800">Address</div>
+              <p class="mt-1 text-ink-900 font-semibold leading-relaxed">
                 Shop No.6, Javed Market, near Aurobindo Park, Munshi Pulia, Sector 12, Indira Nagar,
                 Lucknow, Uttar Pradesh 226016
               </p>
-             <div class="mt-6 rounded-3xl overflow-hidden ring-soft shadow-soft">
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.584068535729!2d80.9984611!3d26.884952799999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be2a7e15c839d%3A0xca34370c253be299!2sDr.%20Vikram%20Jeet%20Singh%20(Smiles%20%26%20Braces%20Dental%20Clinic)!5e0!3m2!1sen!2sin!4v1771252123313!5m2!1sen!2sin"
-    class="w-full h-72 md:h-96"
-    style="border:0;"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-    title="Smiles & Braces Dental Clinic Location">
-  </iframe>
-</div>
-
-                <button class="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-slate-900 font-bold shadow-sm hover:shadow-soft transition"
+              <div class="mt-3 flex flex-col sm:flex-row gap-2">
+                <a class="btn-luxe inline-flex items-center justify-center gap-2 rounded-xl bg-ink-900 px-4 py-2.5 text-white font-extrabold shadow-sm hover:shadow-soft transition"
+                   target="_blank" rel="noopener"
+                   href="https://www.google.com/maps/search/?api=1&query=Dr.%20Vikram%20Jeet%20Singh%20(Smiles%20%26%20Braces%20Dental%20Clinic)%20Munshi%20Pulia%20Lucknow">
+                  Open in Google Maps
+                </a>
+                <button class="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-ink-900 font-extrabold shadow-sm hover:shadow-soft transition"
                         id="copyAddressBtn">
                   Copy Address
                 </button>
               </div>
             </div>
 
-            <div class="rounded-2xl bg-slate-900 text-white p-5 shadow-soft">
-              <div class="text-sm font-semibold text-white/70">Quick Tip</div>
+            <div class="rounded-2xl bg-ink-900 text-white p-5 shadow-soft">
+              <div class="text-sm font-bold text-white/70">Quick Tip</div>
               <div class="mt-2 font-extrabold text-lg">For tooth pain or swelling, call immediately.</div>
-              <p class="mt-1 text-white/75 text-sm">Early treatment prevents complications and saves time.</p>
+              <p class="mt-1 text-white/75 text-sm">Early care prevents complications and saves time.</p>
             </div>
           </div>
 
+          <!-- ✅ Your exact Google Maps embed (responsive) -->
           <div class="mt-6 rounded-3xl overflow-hidden ring-soft shadow-soft">
-            <!-- Map embed (generic search embed). You may replace src with your exact Google Maps embed link. -->
-            <div class="mt-6 rounded-3xl overflow-hidden ring-soft shadow-soft">
-
-
-
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.584068535729!2d80.9984611!3d26.884952799999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be2a7e15c839d%3A0xca34370c253be299!2sDr.%20Vikram%20Jeet%20Singh%20(Smiles%20%26%20Braces%20Dental%20Clinic)!5e0!3m2!1sen!2sin!4v1771252123313!5m2!1sen!2sin"
+              class="w-full h-72 md:h-96"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Smiles & Braces Dental Clinic Location">
+            </iframe>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -783,23 +742,23 @@ html, body { overflow-x: hidden; }
   <section class="py-14 bg-white">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="reveal">
-        <h2 class="font-display text-3xl sm:text-4xl tracking-tight">Frequently Asked Questions</h2>
-        <p class="mt-3 text-slate-600 max-w-2xl">Quick clarity before you book — no confusion, only confidence.</p>
+        <h2 class="font-display text-3xl sm:text-4xl tracking-tight font-extrabold text-ink-900">Frequently Asked Questions</h2>
+        <p class="mt-3 text-slate-600 max-w-2xl">Quick clarity before you book.</p>
       </div>
 
       <div class="mt-8 grid lg:grid-cols-2 gap-4">
-        <details class="reveal group rounded-3xl bg-slate-50 p-6 ring-soft shadow-sm">
-          <summary class="cursor-pointer list-none font-extrabold flex items-center justify-between">
+        <details class="reveal group rounded-3xl bg-pearl-50 p-6 ring-soft shadow-sm">
+          <summary class="cursor-pointer list-none font-extrabold flex items-center justify-between text-ink-900">
             Is consultation available for braces & aligners?
             <span class="ml-3 transition group-open:rotate-180">⌄</span>
           </summary>
           <p class="mt-3 text-slate-700 leading-relaxed">
-            Yes. You can book a detailed orthodontic evaluation. We discuss options, timeline, and expected outcomes.
+            Yes. We evaluate alignment, bite, and discuss suitable options, timeline, and expected outcomes.
           </p>
         </details>
 
-        <details class="reveal group rounded-3xl bg-slate-50 p-6 ring-soft shadow-sm">
-          <summary class="cursor-pointer list-none font-extrabold flex items-center justify-between">
+        <details class="reveal group rounded-3xl bg-pearl-50 p-6 ring-soft shadow-sm">
+          <summary class="cursor-pointer list-none font-extrabold flex items-center justify-between text-ink-900">
             I have tooth pain. What should I do?
             <span class="ml-3 transition group-open:rotate-180">⌄</span>
           </summary>
@@ -808,35 +767,35 @@ html, body { overflow-x: hidden; }
           </p>
         </details>
 
-        <details class="reveal group rounded-3xl bg-slate-50 p-6 ring-soft shadow-sm">
-          <summary class="cursor-pointer list-none font-extrabold flex items-center justify-between">
-            Do you provide teeth cleaning & whitening?
+        <details class="reveal group rounded-3xl bg-pearl-50 p-6 ring-soft shadow-sm">
+          <summary class="cursor-pointer list-none font-extrabold flex items-center justify-between text-ink-900">
+            Do you provide cleaning & whitening?
             <span class="ml-3 transition group-open:rotate-180">⌄</span>
           </summary>
           <p class="mt-3 text-slate-700 leading-relaxed">
-            Yes. Professional scaling and polishing for hygiene, and whitening options for brighter smiles.
+            Yes. Professional scaling/polishing for hygiene and whitening options for brighter smiles.
           </p>
         </details>
 
-        <details class="reveal group rounded-3xl bg-slate-50 p-6 ring-soft shadow-sm">
-          <summary class="cursor-pointer list-none font-extrabold flex items-center justify-between">
-            How do I book fastest?
+        <details class="reveal group rounded-3xl bg-pearl-50 p-6 ring-soft shadow-sm">
+          <summary class="cursor-pointer list-none font-extrabold flex items-center justify-between text-ink-900">
+            What is the fastest way to book?
             <span class="ml-3 transition group-open:rotate-180">⌄</span>
           </summary>
           <p class="mt-3 text-slate-700 leading-relaxed">
-            Fill the form and submit — it will open WhatsApp with your details ready. Or tap Call for immediate help.
+            Fill the form and submit — WhatsApp opens with your details ready. Or tap Call for immediate help.
           </p>
         </details>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-slate-900 text-white">
+  <!-- FOOTER -->
+  <footer class="bg-ink-900 text-white">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
       <div class="grid md:grid-cols-3 gap-8">
         <div>
-          <div class="font-extrabold text-lg">Smiles & Braces Dental Clinic</div>
+          <div class="font-display font-extrabold text-lg">Smiles & Braces Dental Clinic</div>
           <div class="text-white/70 mt-2">Best Dental Clinic in Lucknow • Munshi Pulia, Indira Nagar</div>
           <div class="text-white/70 mt-2">Dr. Vikram Jeet Singh (BDS, MDS)</div>
         </div>
@@ -844,9 +803,9 @@ html, body { overflow-x: hidden; }
           <div class="font-extrabold">Contact</div>
           <div class="mt-3 grid gap-2 text-white/80">
             <a class="hover:text-white" href="tel:+919565321625">Call: +91 9565321625</a>
-            <a class="hover:text-white" href="mailto:smilesandbracesmunshipuliya@gmail.com">Email: smilesandbracesmunshipuliya@gmail.com</a>
+            <a class="hover:text-white break-all" href="mailto:smilesandbracesmunshipuliya@gmail.com">Email: smilesandbracesmunshipuliya@gmail.com</a>
             <a class="hover:text-white" target="_blank" rel="noopener"
-               href="https://www.google.com/maps/search/?api=1&query=Shop%20No.6%2C%20Javed%20Market%2C%20near%20Aurobindo%20Park%2C%20Munshi%20Pulia%2C%20Sector%2012%2C%20Indira%20Nagar%2C%20Lucknow%2C%20Uttar%20Pradesh%20226016">
+               href="https://www.google.com/maps/search/?api=1&query=Dr.%20Vikram%20Jeet%20Singh%20(Smiles%20%26%20Braces%20Dental%20Clinic)%20Munshi%20Pulia%20Lucknow">
               Open in Google Maps
             </a>
           </div>
@@ -854,11 +813,11 @@ html, body { overflow-x: hidden; }
         <div>
           <div class="font-extrabold">Quick Actions</div>
           <div class="mt-3 flex flex-wrap gap-2">
-            <a class="btn-luxe inline-flex items-center justify-center rounded-xl bg-white text-slate-900 px-4 py-2.5 font-bold hover:opacity-90"
+            <a class="btn-luxe inline-flex items-center justify-center rounded-xl bg-white text-ink-900 px-4 py-2.5 font-extrabold hover:opacity-90"
                href="#book">Book Appointment</a>
-            <a class="btn-luxe inline-flex items-center justify-center rounded-xl bg-emerald-600 text-white px-4 py-2.5 font-bold hover:opacity-90"
+            <a class="btn-luxe inline-flex items-center justify-center rounded-xl bg-aqua-700 text-white px-4 py-2.5 font-extrabold hover:opacity-90"
                target="_blank" rel="noopener"
-               href="https://wa.me/919565321625?text=Hello%20Smiles%20%26%20Braces%20Dental%20Clinic%2C%20I%20want%20to%20book%20an%20appointment.%20My%20name%20is%20____%20and%20I%20need%20service%20____.">
+               href="https://wa.me/919565321625?text=Hello%20Smiles%20%26%20Braces%20Dental%20Clinic%2C%20I%20want%20to%20book%20an%20appointment.">
               WhatsApp
             </a>
           </div>
@@ -867,41 +826,32 @@ html, body { overflow-x: hidden; }
 
       <div class="mt-8 border-t border-white/10 pt-6 text-sm text-white/60 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
         <div>© <span id="year"></span> Smiles & Braces Dental Clinic. All rights reserved.</div>
-        <div class="text-white/50">Designed for conversion • Fast booking • Mobile-first</div>
+        <div class="text-white/50">Designed for conversions • Mobile-first • Fast booking</div>
       </div>
     </div>
   </footer>
 
-  <!-- Sticky bottom CTA (mobile conversion booster) -->
- <!-- Clean full-bleed sticky bottom CTA for mobile -->
-<div class="fixed inset-x-0 bottom-0 z-50 md:hidden safe-area-bottom">
-  <div class="mx-auto px-4">
-    <div class="mobile-sticky flex items-center gap-3">
-      <a href="tel:+919565321625"
-         class="btn bg-white/10 text-white hover:bg-white/15 transition"
-         style="backdrop-filter:none;">
-        Call
-      </a>
-
-      <a href="https://wa.me/919565321625?text=Hello%20Smiles%20%26%20Braces%20Dental%20Clinic%2C%20I%20want%20to%20book%20an%20appointment."
-         target="_blank" rel="noopener"
-         class="btn bg-emerald-600 text-white">
-        WhatsApp
-      </a>
+  <!-- ✅ FIXED: Clean full-width sticky CTA for mobile (no overlap/white pill issue) -->
+  <div class="fixed inset-x-0 bottom-0 z-50 md:hidden safe-area-bottom">
+    <div class="mx-auto px-4 pb-3">
+      <div class="mobile-sticky flex items-center gap-2">
+        <a href="tel:+919565321625" class="btn btn-luxe bg-white/10 text-white hover:bg-white/15 transition">Call</a>
+        <a href="https://wa.me/919565321625?text=Hello%20Smiles%20%26%20Braces%20Dental%20Clinic%2C%20I%20want%20to%20book%20an%20appointment."
+           target="_blank" rel="noopener"
+           class="btn btn-luxe bg-aqua-700 text-white hover:opacity-95 transition">WhatsApp</a>
+      </div>
     </div>
   </div>
-</div>
-
 
   <script>
-    // Mobile menu
+    // Mobile menu toggle
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     if (menuBtn && mobileMenu) {
       menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
     }
 
-    // Fancy button hover light-follow
+    // Button hover light-follow
     document.querySelectorAll('.btn-luxe').forEach(btn => {
       btn.addEventListener('mousemove', (e) => {
         const r = btn.getBoundingClientRect();
@@ -913,13 +863,11 @@ html, body { overflow-x: hidden; }
     // Reveal on scroll
     const revealEls = [...document.querySelectorAll('.reveal')];
     const io = new IntersectionObserver((entries) => {
-      entries.forEach(en => {
-        if (en.isIntersecting) en.target.classList.add('in');
-      });
+      entries.forEach(en => { if (en.isIntersecting) en.target.classList.add('in'); });
     }, { threshold: 0.12 });
     revealEls.forEach(el => io.observe(el));
 
-    // Animated counters when visible
+    // Animated counters
     const countEls = document.querySelectorAll('[data-count]');
     const counterIO = new IntersectionObserver((entries) => {
       entries.forEach(en => {
@@ -928,12 +876,11 @@ html, body { overflow-x: hidden; }
         if (el.dataset.done) return;
         el.dataset.done = "1";
         const target = parseInt(el.getAttribute('data-count'), 10) || 0;
-        const start = 0;
-        const dur = 1000 + Math.random() * 800;
+        const dur = 1100 + Math.random() * 700;
         const t0 = performance.now();
         const step = (t) => {
           const p = Math.min(1, (t - t0) / dur);
-          const val = Math.floor(start + (target - start) * (1 - Math.pow(1 - p, 3)));
+          const val = Math.floor(target * (1 - Math.pow(1 - p, 3)));
           el.textContent = val.toString();
           if (p < 1) requestAnimationFrame(step);
         };
@@ -943,9 +890,9 @@ html, body { overflow-x: hidden; }
     countEls.forEach(el => counterIO.observe(el));
 
     // Date min today
-    const todayISO = new Date();
     const pad = (n) => String(n).padStart(2, '0');
-    const iso = `${todayISO.getFullYear()}-${pad(todayISO.getMonth()+1)}-${pad(todayISO.getDate())}`;
+    const d = new Date();
+    const iso = `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
     document.querySelectorAll('input[type="date"]').forEach(i => i.min = iso);
 
     // Copy address
@@ -966,14 +913,18 @@ html, body { overflow-x: hidden; }
 
     // WhatsApp message generator
     const clinicWA = "919565321625";
+    const quickForm = document.getElementById("quickForm");
+    const quickMsg = document.getElementById("quickMsg");
+    const quickErr = document.getElementById("quickErr");
+    const mainForm = document.getElementById("mainForm");
+    const mainErr = document.getElementById("mainErr");
 
-    function validatePhone(p) {
-      const digits = (p || "").replace(/\D/g, "");
-      // Accept 10 digits (India) or 12 with 91 prefix
+    function normalizeDigits(s){ return (s || "").replace(/\D/g, ""); }
+    function validatePhone(p){
+      const digits = normalizeDigits(p);
       return digits.length === 10 || (digits.length === 12 && digits.startsWith("91"));
     }
-
-    function buildWAText(data) {
+    function buildWAText(data){
       return [
         "Hello Smiles & Braces Dental Clinic, I want to book an appointment.",
         "",
@@ -984,81 +935,52 @@ html, body { overflow-x: hidden; }
         `Preferred Time: ${data.slot}`,
         data.email ? `Email: ${data.email}` : null,
         "",
-        `Concern: ${data.notes || data.concern || ""}`,
+        `Concern: ${data.notes || ""}`,
         "",
         "Address: Shop No.6, Javed Market, near Aurobindo Park, Munshi Pulia, Sector 12, Indira Nagar, Lucknow 226016"
       ].filter(Boolean).join("\n");
     }
-
-    function openWhatsAppWith(data) {
+    function openWA(data){
       const text = encodeURIComponent(buildWAText(data));
       window.open(`https://wa.me/${clinicWA}?text=${text}`, "_blank", "noopener");
     }
 
-    // Quick form
-    const quickForm = document.getElementById("quickForm");
-    const formMsg = document.getElementById("formMsg");
-    const formErr = document.getElementById("formErr");
-
     if (quickForm) {
       quickForm.addEventListener("submit", (e) => {
         e.preventDefault();
-        if (formMsg) formMsg.classList.add("hidden");
-        if (formErr) formErr.classList.add("hidden");
+        quickMsg?.classList.add("hidden");
+        quickErr?.classList.add("hidden");
 
-        const fd = new FormData(quickForm);
-        const data = Object.fromEntries(fd.entries());
-
+        const data = Object.fromEntries(new FormData(quickForm).entries());
         if (!data.name || !data.phone || !data.service || !data.date || !data.slot) {
-          if (formErr) {
-            formErr.textContent = "Please fill all required fields.";
-            formErr.classList.remove("hidden");
-          }
+          if (quickErr){ quickErr.textContent = "Please fill all required fields."; quickErr.classList.remove("hidden"); }
           return;
         }
         if (!validatePhone(data.phone)) {
-          if (formErr) {
-            formErr.textContent = "Please enter a valid phone number (10 digits or +91...).";
-            formErr.classList.remove("hidden");
-          }
+          if (quickErr){ quickErr.textContent = "Please enter a valid phone number (10 digits or +91...)."; quickErr.classList.remove("hidden"); }
           return;
         }
 
-        if (formMsg) {
-          formMsg.textContent = "Perfect! Opening WhatsApp with your appointment details…";
-          formMsg.classList.remove("hidden");
-        }
-        openWhatsAppWith({ ...data, notes: data.notes || "" });
+        if (quickMsg){ quickMsg.textContent = "Opening WhatsApp with your appointment details…"; quickMsg.classList.remove("hidden"); }
+        openWA({ ...data, notes: data.notes || "" });
       });
     }
-
-    // Main booking form
-    const mainForm = document.getElementById("mainForm");
-    const mainErr = document.getElementById("mainErr");
 
     if (mainForm) {
       mainForm.addEventListener("submit", (e) => {
         e.preventDefault();
-        if (mainErr) mainErr.classList.add("hidden");
+        mainErr?.classList.add("hidden");
 
-        const fd = new FormData(mainForm);
-        const data = Object.fromEntries(fd.entries());
-
+        const data = Object.fromEntries(new FormData(mainForm).entries());
         if (!data.name || !data.phone || !data.service || !data.date || !data.slot || !data.notes) {
-          if (mainErr) {
-            mainErr.textContent = "Please fill all required fields (including your concern).";
-            mainErr.classList.remove("hidden");
-          }
+          if (mainErr){ mainErr.textContent = "Please fill all required fields (including your concern)."; mainErr.classList.remove("hidden"); }
           return;
         }
         if (!validatePhone(data.phone)) {
-          if (mainErr) {
-            mainErr.textContent = "Please enter a valid phone number (10 digits or +91...).";
-            mainErr.classList.remove("hidden");
-          }
+          if (mainErr){ mainErr.textContent = "Please enter a valid phone number (10 digits or +91...)."; mainErr.classList.remove("hidden"); }
           return;
         }
-        openWhatsAppWith(data);
+        openWA(data);
       });
     }
 
