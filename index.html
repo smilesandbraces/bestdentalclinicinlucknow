@@ -27,7 +27,32 @@
 
   <!-- Lightweight icons (inline SVG uses) + small custom CSS for glow/animations -->
   <style>
-    :root { color-scheme: light; }
+    /* prevent accidental horizontal scroll on mobile */
+html, body { overflow-x: hidden; }
+
+/* make safe-area padding smaller & consistent */
+.safe-area-bottom {
+  padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 0.5rem);
+}
+
+/* smaller pill buttons for mobile sticky CTA */
+.mobile-sticky {
+  --gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  backdrop-filter: none;        /* avoid heavy glass effect here */
+  background: linear-gradient(90deg, rgba(2,6,23,0.95), rgba(7,10,25,0.95));
+  box-shadow: 0 8px 30px rgba(2,6,23,0.35);
+  border-radius: 14px;
+}
+
+.mobile-sticky .btn {
+  flex: 1;
+  border-radius: 12px;
+  padding: 0.5rem 0.75rem;
+  font-weight: 700;
+  text-align: center;
+}
+:root { color-scheme: light; }
     .glass {
       background: rgba(255,255,255,.72);
       backdrop-filter: blur(12px);
@@ -845,19 +870,25 @@
   </footer>
 
   <!-- Sticky bottom CTA (mobile conversion booster) -->
-  <div class="fixed bottom-0 left-0 right-0 z-50 md:hidden safe-area-bottom">
-    <div class="mx-auto max-w-7xl px-4 pb-4">
-      <div class="glass rounded-3xl p-3 ring-soft shadow-luxe">
-        <div class="grid grid-cols-2 gap-2">
-          <a class="btn-luxe inline-flex items-center justify-center gap-2 rounded-2xl bg-slate-900 px-4 py-3 text-white font-extrabold"
-             href="tel:+919565321625">Call</a>
-          <a class="btn-luxe inline-flex items-center justify-center gap-2 rounded-2xl bg-emerald-600 px-4 py-3 text-white font-extrabold"
-             target="_blank" rel="noopener"
-             href="https://wa.me/919565321625?text=Hello%20Smiles%20%26%20Braces%20Dental%20Clinic%2C%20I%20want%20to%20book%20an%20appointment.%20My%20name%20is%20____%20and%20I%20need%20service%20____.">WhatsApp</a>
-        </div>
-      </div>
+ <!-- Clean full-bleed sticky bottom CTA for mobile -->
+<div class="fixed inset-x-0 bottom-0 z-50 md:hidden safe-area-bottom">
+  <div class="mx-auto px-4">
+    <div class="mobile-sticky flex items-center gap-3">
+      <a href="tel:+919565321625"
+         class="btn bg-white/10 text-white hover:bg-white/15 transition"
+         style="backdrop-filter:none;">
+        Call
+      </a>
+
+      <a href="https://wa.me/919565321625?text=Hello%20Smiles%20%26%20Braces%20Dental%20Clinic%2C%20I%20want%20to%20book%20an%20appointment."
+         target="_blank" rel="noopener"
+         class="btn bg-emerald-600 text-white">
+        WhatsApp
+      </a>
     </div>
   </div>
+</div>
+
 
   <script>
     // Mobile menu
