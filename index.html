@@ -30,6 +30,15 @@
   </script>
 
   <style>
+    /* ✅ Reserve space so fixed sticky CTA never covers content on mobile */
+:root { --stickyH: 92px; }  /* adjust if you change sticky size */
+
+@media (max-width: 767px){
+  body{
+    padding-bottom: calc(var(--stickyH) + env(safe-area-inset-bottom, 0px));
+  }
+}
+
     /* Prevent any mobile horizontal overflow */
     html, body { overflow-x: hidden; }
 
@@ -82,20 +91,20 @@
 
     /* Clean mobile sticky CTA (no heavy glass) */
     .mobile-sticky{
-      padding:.55rem .75rem;
-      background: linear-gradient(90deg, rgba(7,17,34,.95), rgba(11,19,36,.95));
-      border: 1px solid rgba(255,255,255,.08);
-      box-shadow: 0 10px 34px rgba(2,6,23,.38);
-      border-radius: 16px;
-    }
-    .mobile-sticky .btn{
-      flex:1;
-      border-radius: 14px;
-      padding:.62rem .9rem;
-      font-weight: 800;
-      letter-spacing: .2px;
-      text-align:center;
-    }
+  padding: .5rem .6rem;
+  background: linear-gradient(90deg, rgba(7,17,34,.96), rgba(11,19,36,.96));
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: 0 10px 32px rgba(2,6,23,.35);
+  border-radius: 16px;
+}
+.mobile-sticky .btn{
+  flex:1;
+  border-radius: 14px;
+  padding: .65rem .9rem;
+  font-weight: 800;
+  line-height: 1.05;
+}
+
   </style>
 
   <!-- Schema: Dentist / LocalBusiness -->
@@ -986,5 +995,38 @@
 
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+  <script>
+  const stickyBar = document.querySelector('.fixed.inset-x-0.bottom-0');
+  if (stickyBar) {
+    stickyBar.style.transition = 'transform .22s ease, opacity .22s ease';
+
+    const hide = () => { stickyBar.style.transform = 'translateY(110%)'; stickyBar.style.opacity = '0'; };
+    const show = () => { stickyBar.style.transform = 'translateY(0)'; stickyBar.style.opacity = '1'; };
+
+    document.addEventListener('focusin', (e) => {
+      if (e.target.matches('input, select, textarea')) hide();
+    });
+    document.addEventListener('focusout', (e) => {
+      if (e.target.matches('input, select, textarea')) show();
+    });
+  }
+</script>
+<script>
+  const stickyBar = document.querySelector('.fixed.inset-x-0.bottom-0');
+  if (stickyBar) {
+    stickyBar.style.transition = 'transform .22s ease, opacity .22s ease';
+
+    const hide = () => { stickyBar.style.transform = 'translateY(110%)'; stickyBar.style.opacity = '0'; };
+    const show = () => { stickyBar.style.transform = 'translateY(0)'; stickyBar.style.opacity = '1'; };
+
+    document.addEventListener('focusin', (e) => {
+      if (e.target.matches('input, select, textarea')) hide();
+    });
+    document.addEventListener('focusout', (e) => {
+      if (e.target.matches('input, select, textarea')) show();
+    });
+  }
+</script>
+
 </body>
 </html>
